@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- Noto Sans Font -->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap"> -->
+        <title>ACN Newswire</title>
+        <!-- Script to be used soon -->
+        <!-- <script>
+            fetch('https://www.acnnewswire.com/acnnewswireapi/api/v1/News/AllNews')
+                .then(response => console.log(response.json()))
+                .catch(error => console.error(error));
+        </script> -->        
+    </head>
+
+    <body>
+        <div class="header-container">
+            <div class="bar-container">
+                <div class="logo-image"></div>
+            </div>
+            <div class="search-bar">
+                <input type="search" class="search-input" placeholder="Search by company, region, sector, industry" aria-label="Search">
+                <button class="search-button" aria-label="Search">
+                    <img src="../Assets/search-icon.svg" alt="Search Icon">
+                </button>
+            </div>
+            <a href="https://acnnewswire.com/aboutus/" class="button-link">
+                <div class="button about">
+                    <div class="button-content">About</div>
+                </div>
+            </a>
+            <a href="https://acnnewswire.com/contactus/" class="button-link">
+                <div class="button contact">
+                    <div class="button-content">Contact</div>
+                </div>
+            </a>
+            <a href="https://acnnewswire.com/client/login.aspx" class="button-link">
+                <div class="button login">
+                    <div class="button-content">Login</div>
+                </div>
+            </a>
+            <a href="https://acnnewswire.com/client/login.aspx" class="button-link">
+                <div class="button register">
+                    <div class="button-content">Register</div>
+                </div>
+            </a>
+            <div class="button company">
+                <div class="button-content">Company</div>
+            </div>
+            <div class="button region">
+                <div class="button-content">Region</div>
+            </div>
+            <div class="button sector" >
+                <div class="button-content">Sector</div>
+            </div>
+            <div class="button industry">
+                <div class="button-content">Industry</div>
+            </div>
+            <div class="button language">
+                <div class="button-content">Language</div>
+            </div>
+            <div class="button events">
+                <div class="button-content">Events</div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    <div class="icon">
+                        <img src="../Assets/globe-icon.svg" alt="Globe Icon" />
+                    </div>
+                    <div class="button-content">English</div>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Simplified Chinese</a>
+                    <a href="#">Traditional Chinese</a>
+                    <a href="#">Korean</a>
+                    <a href="#">Japanese</a>
+                </div>
+            </div>
+            <div class="separator"></div>
+        </div>
+    </body>
+</html>

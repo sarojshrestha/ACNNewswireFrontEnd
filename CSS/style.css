@@ -1,0 +1,676 @@
+/* MAIN CONTAINER */
+body {
+    margin: 0;
+    padding-top: 24px;
+    overflow-x: hidden;
+    font-family: Inter;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1920px;
+    background-color: white;
+    height: 122px;
+    z-index: 1000;
+}
+
+.header-fixed {
+    position: fixed;
+    padding-top: 24px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 122px;
+    z-index: 1000;
+}
+
+.header-scroll {
+    .search-bar {
+        left: calc(var(--original-left) - 74px);
+        width: 876px;
+    }
+
+    .bar-container,
+    .button.company,
+    .button.region,
+    .button.sector,
+    .button.industry,
+    .button.language,
+    .button.events {
+        left: calc(var(--original-left) - 149px);
+    }
+
+
+    .button-link .button.about, 
+    .button-link .button.contact,
+    .button-link .button.login,
+    .button-link .button.register, 
+    .dropdown{
+        left: calc(var(--original-left) + 139px);
+    }
+
+
+}
+
+/* NAV BAR BUTTONS */
+/* Company, Region, Sector, Industry, Language, Events */
+.button {
+    height: 48px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    word-wrap: break-word;
+    top: 72px;
+    transition: left 0.3s ease;
+}
+
+.button.company {
+    width: 113px;
+    --original-left: 221px; 
+    left: var(--original-left);
+}
+
+.button.region {
+    width: 92px;
+    --original-left: 334px; 
+    left: var(--original-left);
+}
+
+.button.sector {
+    width: 86px;
+    --original-left: 434px; 
+    left: var(--original-left);
+}
+
+.button.industry {
+    width: 104px;
+    --original-left: 528px; 
+    left: var(--original-left);
+}
+
+.button.language {
+    width: 117px;
+    --original-left: 640px; 
+    left: var(--original-left);
+}
+
+.button.events {
+    width: 88px;
+    --original-left: 765px; 
+    left: var(--original-left);
+}
+
+.button-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* About, Contact, Login, Register */
+.button-link .button {
+    cursor: pointer;
+    text-decoration: none;
+    height: 48px;
+    /* padding: 8px; */
+    border-radius: 4px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    word-wrap: break-word;
+    top: 4px;
+    transition: left 0.3s ease;
+}
+
+.button-link .button.about {
+    width: 84px;
+    --original-left: 1287px; 
+    left: var(--original-left);
+}
+
+.button-link .button.contact {
+    width: 114px;
+    --original-left: 1379px; 
+    left: var(--original-left);
+}
+
+.button-link .button.login {
+    width: 80px;
+    --original-left: 1501px; 
+    left: var(--original-left);
+}
+
+.button-link .button.register {
+    width: 102px;
+    color: #1373AF;
+    --original-left: 1589px; 
+    left: var(--original-left);
+}
+
+.button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.icon div {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: #242424;
+    left: 1px;
+    top: 1px;
+}
+
+.separator {
+    width: 1920px;
+    height: 0;
+    position: absolute;
+    border: 1px #D7D7D7 solid;
+    top: 144px;
+    left: 0;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    width: 713px;
+    height: 56px;
+    padding: 4px 4px 4px 16px;
+    position: absolute;
+    border-bottom: 1px #7B7B7B solid;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between input and button */
+    top: 0;
+    --original-left: 528px;
+    left: var(--original-left);
+    transition: left 0.3s ease;
+}
+
+.search-input {
+    flex-grow: 1;
+    height: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    box-shadow: none; 
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #7B7B7B;
+}
+
+.search-button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* LOGO */
+.bar-container {
+    width: 240px;
+    height: 40px;
+    padding: 8px;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    top: 16px;
+    --original-left: 229px;
+    left: var(--original-left);
+    transition: left 0.3s ease;
+}
+
+.logo-image {
+    width: 224px; 
+    height: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-image: url('../Assets/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+/* LANGUAGE DROPDOWN IN NAV BAR */
+.dropdown {
+    position: absolute;
+    top: calc(4px + 48px + 8px);
+    padding-top: 20px;
+    display: inline-block;
+    transition: left 0.3s ease;
+    --original-left: 1581px; 
+    left: var(--original-left);
+}
+
+.dropdown-button {
+    width: 117px;
+    height: 48px;
+    padding: 8px;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px;
+}
+
+.icon img {
+    width: 100%;
+    height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aligns the dropdown below the button */
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #242424;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-button:focus + .dropdown-content,
+.dropdown-button:active + .dropdown-content {
+    display: block;
+}
+
+
+/* FOOTER */
+.footer-background {
+    position: absolute;
+    width: 1920px;
+    height: 533px;
+    background: #F0F0F0;
+}
+
+/* LOGO */
+.menu {
+    position: absolute;
+    left: 80px;
+    top: 39.7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NAV BAR HEADINGS */
+.nav {
+    position: absolute;
+    top: 121.09px;
+    left: 80px;
+    display: flex;
+    gap: 249px;
+}
+
+.nav-item {
+    color: #242424;
+    font-size: 20px;
+    left: 80px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+/* NAV BAR LIST */
+.footer-nav {
+    position: absolute;
+    top: 168.73px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.footer-nav.about {
+    left: 80px;
+}
+
+.footer-nav.terms {
+    left: 387px;
+}
+
+.footer-nav.research {
+    left: 695px;
+}
+
+.footer-nav.participate {
+    left: 1036px;
+}
+
+.footer-nav-item {
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+/* CONNECT WITH US */
+.connect {
+    position: absolute;
+    left: 1424px;
+    top: 121.09px;
+}
+
+.connect-text {
+    color: #242424;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.connect-icons {
+    padding-top: 23.88px;
+    display: flex;
+    gap: 27.85px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.icon-footer {
+    padding: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-footer.linkedin {
+    background-image: url('../Assets/linkedin-icon.svg');
+}
+
+.icon-footer.facebook {
+    background-image: url('../Assets/facebook-icon.svg');
+}
+
+.icon-footer.twitter {
+    background-image: url('../Assets/twitter-icon.svg');
+}
+
+.social-links {
+    position: absolute;
+    left: 1494px;
+    top: 176.67px;
+    gap: 24.75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.social-link {
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+/* BORDER */
+.border-bottom {
+    position: absolute;
+    left: 80px;
+    width: 1760px;
+    border-bottom: 1px solid #D7D7D7;
+    top: 461px;
+}
+
+/* FOOTER TEXT */
+.footer {
+    position: absolute;
+    left: 80px;
+    top: 485px;
+    width: 100%;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.footer-text {
+    width: 1920px;
+}
+
+/* PRESS RELEASE BODY */
+.press-release-headline-container {
+    margin-top: 24px;
+    width: 1462px;
+    margin-left: 229px;
+    margin-right: 229px;
+}
+
+.press-release-headline-logo {
+    max-width: 266px; 
+    padding: 8px;
+    margin-bottom: 32px;
+}
+
+.press-release-headline-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.press-release-top-headline {
+    padding: 8px;
+    color: #242424;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 32px;
+    word-wrap: break-word;
+    margin-bottom: 32px;
+}
+
+.press-release-headline {
+    color: #1373AF;
+    padding: 8px;
+    font-family: Inter;
+    font-size: 48px; 
+    font-weight: 500;
+    line-height: 72px;
+    word-wrap: break-word;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.press-release-sub-headline {
+    padding: 8px;
+    color: #242424;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 40px;
+    word-wrap: break-word;
+}
+
+.press-release-body-container {
+    width: 1013px;
+    margin-left: 229px;
+    margin-right: 676px;
+    margin-bottom: 72px;
+}
+
+.press-release-body {
+    color: black;
+    padding: 8px;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+
+.press-release-body img {
+    max-width: 1013px;
+    height: auto;
+    display: block;
+}
+
+.press-release-body-footer {
+    color: #7B7B7B; 
+    font-size: 16px; 
+    font-family: Inter; 
+    font-style: italic; 
+    font-weight: 400; 
+    line-height: 32px; 
+    word-wrap: break-word;
+}
+
+
+/* RELATED PRESS RELEASES AND MORE FROM THIS SOURCE */
+.related-press-releases-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1760px;
+    width: 100%;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 72px;
+    gap: 32px;
+}
+
+.related-press-releases {
+    padding: 8px;
+    height: auto;
+}
+
+.related-press-release-title {
+    color: #242424;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 40px;
+    word-wrap: break-word;
+    padding-bottom: 16px;
+}
+
+/* For responsive */
+/* @media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr; Single column layout on small screens
+    }
+} */
+
+.related-press-release-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+ 
+.related-press-release-item-thumbnail,
+.related-press-release-item-thumbnail-mfts {
+    width: 100%;
+    max-width: 117px;
+    height: 72px;
+    overflow: hidden;
+    position: relative;
+}
+
+.related-press-release-item-thumbnail-mfts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.related-press-release-item-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.related-press-release-item-content {
+    padding-left: 32px;
+    width: 100%;
+}
+
+.related-press-release-item-date-views {
+    font-size: 12px;
+    color: #242424;
+}
+
+.date-pr,
+.views-pr {
+    color: #242424;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+p.title-pr {
+    width: 713px;
+    color: #242424;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 500;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
