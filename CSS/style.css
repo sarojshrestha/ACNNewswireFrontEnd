@@ -204,12 +204,11 @@ body {
 .search-bar {
     width: 713px;
     height: 56px;
-    padding: 4px 4px 4px 16px;
     position: absolute;
     border-bottom: 1px #7B7B7B solid;
     display: flex;
     align-items: center;
-    gap: 10px; /* space between input and button */
+    gap: 10px;
     top: 0;
     --original-left: 528px;
     left: var(--original-left);
@@ -219,10 +218,10 @@ body {
 .search-input {
     flex-grow: 1;
     height: 100%;
-    padding: 8px;
+    padding: 8px 8px 0px 8px;
     border: none;
     font-size: 18px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Inter';
     box-shadow: none; 
     outline: none;
 }
