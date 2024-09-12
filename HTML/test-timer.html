@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Timer Display</title>
+        <style>
+            body {
+                font-family: 'Inter';
+                margin: 50px;
+            }
+            .timezone {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .time {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="city-time">Mumbai (UTC +5:30): <span id="mumbai"></span></div>
+        <div class="city-time">Bangkok (UTC +7): <span id="bangkok"></span></div>
+        <div class="city-time">Singapore (UTC +8): <span id="singapore"></span></div>
+        <div class="city-time">Hong Kong (UTC +8): <span id="hongkong"></span></div>
+        <div class="city-time">Tokyo (UTC +9): <span id="tokyo"></span></div>
+        <div class="city-time">Sydney (UTC +10): <span id="sydney"></span></div>
+    
+        <script>
+            function updateTime() {
+  
+                const mumbaiTime = getTimePerTimezone('Asia/Kolkata');
+                document.getElementById('mumbai').textContent = mumbaiTime;
+
+                const bangkokTime = getTimePerTimezone('Asia/Bangkok');
+                document.getElementById('bangkok').textContent = bangkokTime;
+    
+                const singaporeTime = getTimePerTimezone('Asia/Singapore');
+                document.getElementById('singapore').textContent = singaporeTime;
+
+                const hongkongTime = getTimePerTimezone('Asia/Hong_Kong');
+                document.getElementById('hongkong').textContent = hongkongTime;
+    
+                const tokyoTime = getTimePerTimezone('Asia/Tokyo')
+                document.getElementById('tokyo').textContent = tokyoTime;
+    
+                const sydneyTime = getTimePerTimezone('Australia/Sydney')
+                document.getElementById('sydney').textContent = sydneyTime;
+            }
+
+            function getTimePerTimezone(timeZone) {
+                const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                return new Date().toLocaleTimeString('en-US', { timeZone: timeZone, ...options });
+            }
+
+            // Update the time every second
+            setInterval(updateTime, 1000);
+
+            updateTime();
+        </script>
+    
+    </body>
+</html>
