@@ -9,18 +9,17 @@
                 font-family: 'Inter';
                 margin: 50px;
             }
-            .timezone {
+            .date {
                 font-size: 24px;
-                margin-bottom: 10px;
             }
-            .time {
+            .city-time {
                 font-size: 20px;
             }
         </style>
     </head>
 
     <body>
-
+        <div class="date">Current Date: <span id="date"></span></div>
         <div class="city-time">Mumbai (UTC +5:30): <span id="mumbai"></span></div>
         <div class="city-time">Bangkok (UTC +7): <span id="bangkok"></span></div>
         <div class="city-time">Singapore (UTC +8): <span id="singapore"></span></div>
@@ -30,6 +29,9 @@
     
         <script>
             function updateTime() {
+
+                const localDate = getLocalDate();
+                document.getElementById('date').textContent = localDate;
   
                 const mumbaiTime = getTimePerTimezone('Asia/Kolkata');
                 document.getElementById('mumbai').textContent = mumbaiTime;
@@ -48,6 +50,12 @@
     
                 const sydneyTime = getTimePerTimezone('Australia/Sydney')
                 document.getElementById('sydney').textContent = sydneyTime;
+            }
+
+            function getLocalDate(){
+                const currentDate = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                return currentDate.toLocaleDateString(undefined, options);
             }
 
             function getTimePerTimezone(timeZone) {

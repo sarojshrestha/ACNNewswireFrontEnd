@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACN Newswire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../CSS/new-style.css">
+  </head>
+
+  <body class="content-inner">
+    <div class="container-fluid body-container p-0">
+        <header id="header" class="fixed-top">
+            <section class="top-nav"> <!-- First Row - Timezones -->
+                <div class="d-flex align-items-center justify-content-center w-100">
+                    <div class="p-1 p-md-2 bd-highlight nav-middle d-none d-sm-block">
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <p class="d-none d-lg-block"><span id='current-date'></span></p>
+                            <p class="d-none d-lg-block"><strong>Mumbai </strong><span id='mumbai'></span> (UTC +5:30)</p>
+                            <p class="d-none d-lg-block"><strong>Bangkok </strong><span id='bangkok'></span> (UTC +7)</p>
+                            <p class="d-none d-lg-block"><strong>SG </strong><span id='singapore'></span> (UTC +8)</p>
+                            <p class="d-none d-lg-block"><strong>HK </strong><span id='hongkong'></span> (UTC +8)</p>
+                            <p class="d-none d-lg-block"><strong>Tokyo </strong><span id='tokyo'></span> (UTC +9)</p>
+                            <p class="d-none d-lg-block"><strong>Sydney </strong><span id='sydney'></span> (UTC +10)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="py-3 mb-0 main-nav pb-xl-0"> <!-- Second Row - Logo, Search Bar, Buttons -->
+                <div class="container-fluid mx-0 px-0">
+                    <div class="nav-logo d-flex flex-wrap align-items-center justify-content-center">
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+                            <img src="../Assets/logo.svg" alt="ACN Newswire Logo"/>
+                        </a>      
+                        <form class="d-flex flex-grow-1" role="search">
+                            <div class="input-group w-100">
+                                <input type="search" class="form-control form-control-search border-0 bg-transparent" aria-label="Search" placeholder="Search by company, region, sector, industry" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-search" type="button">
+                                        <img src="../Assets/search-icon.svg" alt="Search Icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>      
+                        <div class="nav-black col-12 col-lg-auto mb-2 justify-content-center mb-md-0 d-none d-xl-block">
+                            <ul class="nav gap-6x">
+                                <li><a href="https://acnnewswire.com/aboutus/" class="nav-link px-8">About</a></li>
+                                <li><a href="https://acnnewswire.com/contactus/" class="nav-link px-8">Contact</a></li>
+                                <li><a href="https://acnnewswire.com/client/login.aspx" class="nav-link px-8">Login</a></li>
+                                <li><a href="https://acnnewswire.com/client/login.aspx" class="nav-link register px-8 ">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-xl bg-body-tertiary py-0 third-row-nav" aria-label="Light offcanvas navbar"> <!-- Third Row - Labels and Language Dropdown -->
+                <ul class="navbar-nav justify-content-left flex-grow-1 pe-3 gap-6x">
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Region</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Sector</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Industry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-8" href="#">Events</a>
+                    </li>
+                    <li class="nav-item ms-auto"> 
+                        <button class="dropdown-button" id="languageDropdown" aria-expanded="false">
+                            <div class="icon">
+                                <img src="../Assets/globe-icon.svg" alt="Globe Icon" />
+                            </div>
+                            English <!-- Will update dependent on which language is selected -->
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Simplified Chinese</a>
+                            <a href="#">Traditional Chinese</a>
+                            <a href="#">Korean</a>
+                            <a href="#">Japanese</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+       </header>
+       <div class="separator"></div>
+    </div>
+    <script src="../JS/app.js"></script>
+  </body>
+</html>
