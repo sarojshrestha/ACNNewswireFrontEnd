@@ -50,6 +50,7 @@ body {
 
 .top-nav .nav-middle p {
     margin-bottom: 0;
+    font-size: 15px;
 }
 
 .top-nav .nav-right a {
@@ -123,7 +124,8 @@ body {
 }
 
 .gap-6x {
-    gap: 24px;
+    /* was 24px */
+    gap: 16px; 
 }
 
 /* THIRD ROW */
