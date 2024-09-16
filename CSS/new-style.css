@@ -12,11 +12,12 @@ body {
 
 #header {
     position: relative;
-    transition: all 0.5s;
+    transition: all 0.3s ease-in-out;
 }
 
 #header.fixed-top.sticked {
     position: fixed;
+    background-color: white;
 }
 
 .fixed-top.sticked .navbar-expand-lg .navbar-toggler {
@@ -27,15 +28,11 @@ body {
     display: none !important;
 }
 
-.fixed-top.sticked .navbar-toggler {
-    top: -20px;
-    right: -10px;
-}
-
-.fixed-top.sticked .main-nav {
-    transition: all 0.5s;
-    padding-left: 40px;
-    padding-right: 40px;
+.fixed-top.sticked .main-nav, 
+.fixed-top.sticked .third-row-nav {
+    transition: all 0.3s ease-in-out;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .top-nav {
@@ -66,11 +63,6 @@ body {
 
 .bg-body-tertiary {
     background-color: transparent !important;
-}
-
-.navbar-toggler {
-    position: absolute;
-    top: -20px;
 }
 
 .bottom-nav {
@@ -144,8 +136,14 @@ body {
 }
 
 /* LANGUAGE DROPDOWN IN NAV BAR */
-.navbar-nav .dropdown {
-    position: relative;
+.fixed-top.sticked .nav-item .dropdown-button .icon {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.fixed-top.sticked .nav-item .dropdown-button .label {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .dropdown-button {
@@ -158,20 +156,23 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
-    font-family: 'Inter';
+}
+
+.label {
+    color: #242424;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
 }
 
 .icon img {
-    width: 100%;
-    height: auto;
+    width: 24px;
+    height: 24px;
 }
 
 .dropdown-content {
@@ -220,6 +221,10 @@ body {
     border: 1px #D7D7D7 solid;
     top: 168px;
     left: 0;
+}
+
+.sticked .separator {
+    top: 121px;
 }
 
 /* PRESS RELEASE BODY */
@@ -372,11 +377,50 @@ hr {
     }
 }
 
+/* BREADCRUMBS */
+.site-breadcrumbs {
+    margin-top: 24px;
+    padding: 8px;
+}
 
-/* FROM OLD STYLE CSS */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item+.breadcrumb-item {
+    color: #7B7B7B;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #242424;
+}
+
+.breadcrumb-item a:hover {
+    color: #242424;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '';
+    background-size: 24px 30px;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    background-image: url(../Assets/chevron-right.svg);
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 4px;
+}
+
 /* PRESS RELEASE BODY */
 .press-release-headline-container {
-    margin-top: 48px;
+    margin-top: 24px;
     width: 100%;
 }
 
@@ -561,6 +605,31 @@ p.title-pr {
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
+}
+
+.more-press-releases {
+    margin-top: 16px;
+    text-align: right;
+}
+
+.more-press-releases a {
+    color: #242424;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.more-press-releases a:hover {
+    text-decoration: none;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
 }
 
 /* EVENTS */

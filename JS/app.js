@@ -6,6 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById('header').innerHTML = data;
 
+            // To make the header sticky and fixed
+            window.addEventListener("scroll", function() {
+                const selectHeader = document.querySelector("#header.fixed-top");
+                const stickyPoint = selectHeader.offsetTop;
+
+                if (selectHeader) {
+                    document.addEventListener("scroll", () => {
+                    window.scrollY > 50
+                        ? selectHeader.classList.add("sticked")
+                        : selectHeader.classList.remove("sticked");
+                    });
+                }
+            });
+
             // Call updateTime() after the new content is loaded
             updateTime();
             
@@ -22,22 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error loading footer:', error));
 });
-
-// To make the header sticky and fixed
-// window.addEventListener("scroll", function() {
-//     const selectHeader = document.querySelector("#header");
-//     console.log(selectHeader);
-//     const stickyPoint = selectHeader.offsetTop;
-//     console.log(stickyPoint);
-
-//     if (selectHeader) {
-//         document.addEventListener("scroll", () => {
-//           window.scrollY > 100
-//             ? selectHeader.classList.add("sticked")
-//             : selectHeader.classList.remove("sticked");
-//         });
-//     }
-// });
 
 function updateTime() {
     const localDate = getLocalDate();
