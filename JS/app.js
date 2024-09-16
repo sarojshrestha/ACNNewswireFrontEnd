@@ -62,7 +62,7 @@ function updateTime() {
 
 function getLocalDate(){
     const currentDate = new Date();
-    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
     return currentDate.toLocaleDateString(undefined, options);
 }
 
