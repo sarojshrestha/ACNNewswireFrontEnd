@@ -50,7 +50,7 @@ body {
 
 .top-nav .nav-middle p {
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .top-nav .nav-right a {
@@ -126,6 +126,90 @@ body {
 .gap-6x {
     /* was 24px */
     gap: 16px; 
+}
+
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+}
+
+.full-width-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.dropdown-menu.full-width-dropdown.show {
+    top: 56px;
+}
+
+.fixed-top.sticked .dropdown-menu.full-width-dropdown.show {
+    top: 46px;
+}
+
+.full-width-dropdown .container-fluid {
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #242424;
+    font-size: 18px;
+    font-family: Inter;
+}
+
+.full-width-dropdown .container-fluid.industry h6 {
+    font-weight: 400;
+}
+
+.full-width-dropdown .container-fluid.industry li {
+    font-weight: 600;
+}
+
+.full-width-dropdown .row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.full-width-dropdown .col {
+    padding: 15px;
+    text-align: left;
+}
+
+.full-width-dropdown h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.full-width-dropdown ul {
+    padding-left: 0;
+}
+
+.full-width-dropdown li {
+    margin-bottom: 5px;
+}
+
+/* Use for linking - To be implemented */
+.full-width-dropdown a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.full-width-dropdown a:hover {
+    text-decoration: none;
+}
+
+.no-caret::after {
+    display: none !important;
+}
+
+.nav-link[aria-expanded="true"] {
+    border-bottom: 4px solid black;
+    padding-bottom: 16px;
 }
 
 /* THIRD ROW */

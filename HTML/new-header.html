@@ -4,13 +4,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ACN Newswire</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
         <link rel="stylesheet" href="../CSS/new-style.css">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap JS (with Popper.js) -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
     </head>
 
     <body class="content-inner">
@@ -19,14 +27,14 @@
                 <section class="top-nav"> <!-- First Row - Timezones -->
                     <div class="d-flex align-items-center justify-content-center w-100">
                         <div class="p-1 p-md-2 bd-highlight nav-middle d-none d-sm-block">
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <div class="d-flex justify-content-center gap-4 flex-wrap">
                                 <p class="d-none d-lg-block"><span id='current-date'></span></p>
-                                <p class="d-none d-lg-block"><strong>Mumbai </strong><span id='mumbai'></span> (UTC +5:30)</p>
-                                <p class="d-none d-lg-block"><strong>Bangkok </strong><span id='bangkok'></span> (UTC +7)</p>
-                                <p class="d-none d-lg-block"><strong>SG </strong><span id='singapore'></span> (UTC +8)</p>
-                                <p class="d-none d-lg-block"><strong>HK </strong><span id='hongkong'></span> (UTC +8)</p>
-                                <p class="d-none d-lg-block"><strong>Tokyo </strong><span id='tokyo'></span> (UTC +9)</p>
-                                <p class="d-none d-lg-block"><strong>Sydney </strong><span id='sydney'></span> (UTC +10)</p>
+                                <p class="d-none d-lg-block">Mumbai <span id='mumbai'></span> (UTC +5:30)</p>
+                                <p class="d-none d-lg-block">Bangkok <span id='bangkok'></span> (UTC +7)</p>
+                                <p class="d-none d-lg-block">SG <span id='singapore'></span> (UTC +8)</p>
+                                <p class="d-none d-lg-block">HK <span id='hongkong'></span> (UTC +8)</p>
+                                <p class="d-none d-lg-block">Tokyo <span id='tokyo'></span> (UTC +9)</p>
+                                <p class="d-none d-lg-block">Sydney <span id='sydney'></span> (UTC +10)</p>
                             </div>
                         </div>
                     </div>
@@ -58,30 +66,420 @@
                         </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-expand-xl bg-body-tertiary py-0 third-row-nav" aria-label="Light offcanvas navbar"> <!-- Third Row - Labels and Language Dropdown -->
+                <nav class="navbar navbar-expand-xl bg-body-tertiary py-0 third-row-nav" aria-label="Light offcanvas navbar">
                     <ul class="navbar-nav justify-content-left flex-grow-1 pe-3 gap-6x">
-                        <li class="nav-item">
-                            <a class="nav-link px-8" href="#">Company</a>
+                        <!-- Company Dropdown -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link px-8 dropdown-toggle no-caret" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Company
+                            </a>
+                            <ul class="dropdown-menu full-width-dropdown" aria-labelledby="companyDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: Recent -->
+                                        <div class="col">
+                                            <h6>Recent</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 2: China -->
+                                        <div class="col">
+                                            <h6>China</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 3: Hong Kong -->
+                                        <div class="col">
+                                            <h6>Hong Kong</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 4: Indonesia -->
+                                        <div class="col">
+                                            <h6>Indonesia</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 5: Japan -->
+                                        <div class="col">
+                                            <h6>Japan</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 6: Malaysia -->
+                                        <div class="col">
+                                            <h6>Malaysia</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 7: Singapore -->
+                                        <div class="col">
+                                            <h6>Singapore</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>                        
+                
+                        <!-- Region Dropdown -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link px-8 dropdown-toggle no-caret" href="#" id="regionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Region
+                            </a>
+                            <ul class="dropdown-menu full-width-dropdown" aria-labelledby="regionDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: Region 1 -->
+                                        <div class="col">
+                                            <h6>Recent</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 2: Region 1 -->
+                                        <div class="col">
+                                            <h6>China</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 3: Hong Kong -->
+                                        <div class="col">
+                                            <h6>Hong Kong</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 4: Indonesia -->
+                                        <div class="col">
+                                            <h6>Indonesia</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 5: Japan -->
+                                        <div class="col">
+                                            <h6>Japan</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 6: Malaysia -->
+                                        <div class="col">
+                                            <h6>Malaysia</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 7: Singapore -->
+                                        <div class="col">
+                                            <h6>Singapore</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-8" href="#">Region</a>
+                
+                        <!-- Sector Dropdown -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link px-8 dropdown-toggle no-caret" href="#" id="sectorDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sector
+                            </a>
+                            <ul class="dropdown-menu full-width-dropdown" aria-labelledby="sectorDropdown">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <!-- Column 1: Business -->
+                                        <div class="col">
+                                            <h6>BUSINESS</h6>
+                                            <ul class="list-unstyled">
+                                                <!-- <li><a href="#">One</a></li> -->
+                                                <li>ASEAN</li>
+                                                <li>Daily News</li>
+                                                <li>Government</li>
+                                                <li>Human Resources</li>
+                                                <li>Local Biz</li>
+                                                <li>Startups</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 2: Communications -->
+                                        <div class="col">
+                                            <h6>COMMUNICATIONS</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Advertising</li>
+                                                <li>Broadcast, Film & Satellite</li>
+                                                <li>Media & Marketing</li>
+                                                <li>Telecoms, 5G</li>
+                                                <li>Wireless, Apps</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 3: Cryptocurrencies -->
+                                        <div class="col">
+                                            <h6>CRYPTOCURRENCIES</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Blockchain Tech</li>
+                                                <li>Crypto, Exchange</li>
+                                                <li>ICOs & Tokens</li>
+                                                <li>Metaverse, Games</li>
+                                                <li>Mining & Staking</li>
+                                                <li>NFTs</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 4: Finance -->
+                                        <div class="col">
+                                            <h6>FINANCE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Banking & Insurance</li>
+                                                <li>Cards & Payments</li>
+                                                <li>Daily Finance</li>
+                                                <li>Exchanges & Software</li>
+                                                <li>FinTech</li>
+                                                <li>Funds & Equities</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 5: Healthcare -->
+                                        <div class="col">
+                                            <h6>HEALTHCARE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>BioTech</li>
+                                                <li>Cannabis</li>
+                                                <li>Clinical Trials</li>
+                                                <li>Healthcare & Pharm</li>
+                                                <li>MedTech</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 6: Lifestyle -->
+                                        <div class="col">
+                                            <h6>LIFESTYLE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Boating</li>
+                                                <li>Design, Art & Music</li>
+                                                <li>Education</li>
+                                                <li>Fashion & Apparel</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 7: Sustainability -->
+                                        <div class="col">
+                                            <h6>SUSTAINABILITY</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Agritech</li>
+                                                <li>Alternative Energy</li>
+                                                <li>Energy</li>
+                                                <li>Environment & ESG</li>
+                                                <li>EVs, Transportation</li>
+                                                <li>Smart Cities</li>
+                                                <li>Water</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 8: Technology -->
+                                        <div class="col">
+                                            <h6>TECHNOLOGY</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Artificial Intel [AI]</li>
+                                                <li>Automation [IoT]</li>
+                                                <li>Cloud & Enterprise</li>
+                                                <li>CyberSecurity</li>
+                                                <li>Digitalization</li>
+                                                <li>Electronics</li>
+                                                <li>Innovation</li>
+                                                <li>Science & Nanotech</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-8" href="#">Sector</a>
+                
+                        <!-- Industry Dropdown -->
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link px-8 dropdown-toggle no-caret" href="#" id="industryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Industry
+                            </a>
+                            <ul class="dropdown-menu full-width-dropdown" aria-labelledby="industryDropdown">
+                                <div class="container-fluid industry">
+                                    <div class="row">
+                                        <!-- Column 1: Business -->
+                                        <div class="col">
+                                            <h6>BUSINESS</h6>
+                                            <ul class="list-unstyled">
+                                                <li>ASEAN</li>
+                                                <li>Daily News</li>
+                                                <li>Government</li>
+                                                <li>Human Resources</li>
+                                                <li>Local Biz</li>
+                                                <li>Startups</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 2: Communications -->
+                                        <div class="col">
+                                            <h6>COMMUNICATIONS</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Advertising</li>
+                                                <li>Broadcast, Film & Satellite</li>
+                                                <li>Media & Marketing</li>
+                                                <li>Telecoms, 5G</li>
+                                                <li>Wireless, Apps</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 3: Cryptocurrencies -->
+                                        <div class="col">
+                                            <h6>CRYPTOCURRENCIES</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Blockchain Tech</li>
+                                                <li>Crypto, Exchange</li>
+                                                <li>ICOs & Tokens</li>
+                                                <li>Metaverse, Games</li>
+                                                <li>Mining & Staking</li>
+                                                <li>NFTs</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 4: Finance -->
+                                        <div class="col">
+                                            <h6>FINANCE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Banking & Insurance</li>
+                                                <li>Cards & Payments</li>
+                                                <li>Daily Finance</li>
+                                                <li>Exchanges & Software</li>
+                                                <li>FinTech</li>
+                                                <li>Funds & Equities</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 5: Healthcare -->
+                                        <div class="col">
+                                            <h6>HEALTHCARE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>BioTech</li>
+                                                <li>Cannabis</li>
+                                                <li>Clinical Trials</li>
+                                                <li>Healthcare & Pharm</li>
+                                                <li>MedTech</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 6: Lifestyle -->
+                                        <div class="col">
+                                            <h6>LIFESTYLE</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Boating</li>
+                                                <li>Design, Art & Music</li>
+                                                <li>Education</li>
+                                                <li>Fashion & Apparel</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 7: Sustainability -->
+                                        <div class="col">
+                                            <h6>SUSTAINABILITY</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Agritech</li>
+                                                <li>Alternative Energy</li>
+                                                <li>Energy</li>
+                                                <li>Environment & ESG</li>
+                                                <li>EVs, Transportation</li>
+                                                <li>Smart Cities</li>
+                                                <li>Water</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 8: Technology -->
+                                        <div class="col">
+                                            <h6>TECHNOLOGY</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Artificial Intel [AI]</li>
+                                                <li>Automation [IoT]</li>
+                                                <li>Cloud & Enterprise</li>
+                                                <li>CyberSecurity</li>
+                                                <li>Digitalization</li>
+                                                <li>Electronics</li>
+                                                <li>Innovation</li>
+                                                <li>Science & Nanotech</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-8" href="#">Industry</a>
-                        </li>
+                
+                        <!-- Language Dropdown -->
                         <li class="nav-item">
                             <a class="nav-link px-8" href="#">Language</a>
                         </li>
+
+                        <!-- Events Dropdown -->
                         <li class="nav-item">
                             <a class="nav-link px-8" href="#">Events</a>
                         </li>
+
+                        <!-- Selected Language Dropdown -->
                         <li class="nav-item ms-auto"> 
                             <button class="dropdown-button" id="languageDropdown" aria-expanded="false">
                                 <div class="icon"><img src="../Assets/globe-icon.svg" alt="Globe Icon" /></div>
-                                <div class="nav-link px-8 label">English</div><!-- Will update dependent on which language is selected -->
+                                <div class="nav-link px-8 label">English</div>
                             </button>
                             <div class="dropdown-content">
                                 <a href="#">Simplified Chinese</a>
@@ -91,7 +489,7 @@
                             </div>
                         </li>
                     </ul>
-                </nav>
+                </nav>                
                 <div class="separator"></div>
             </header>
         </div>
