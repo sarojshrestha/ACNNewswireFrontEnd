@@ -9,14 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // To make the header sticky and fixed
             window.addEventListener("scroll", function() {
                 const selectHeader = document.querySelector("#header.fixed-top");
-                const stickyPoint = selectHeader.offsetTop;
+                const container = document.querySelector(".container");
 
-                if (selectHeader) {
-                    document.addEventListener("scroll", () => {
-                    window.scrollY > 50
-                        ? selectHeader.classList.add("sticked")
-                        : selectHeader.classList.remove("sticked");
-                    });
+                if (selectHeader && container) {
+                    if (window.scrollY > 50) {
+                        selectHeader.classList.add("sticked");
+                        container.style.marginTop = '240px'; // adjust container margin-top so that it won't be blocked on the first scroll
+                    } else {
+                        selectHeader.classList.remove("sticked");
+                        container.style.marginTop = "0"; // reset margin-top
+                    }
                 }
             });
 

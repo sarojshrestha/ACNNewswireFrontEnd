@@ -137,11 +137,17 @@ body {
 
 .full-width-dropdown {
     position: absolute;
+    justify-content: space-between;
     left: 0;
     right: 0;
     width: 100%;
+    /* height: 320px; */
     margin: 0;
-    padding: 20px 0;
+    padding: 16px 0;
+}
+
+.full-width-dropdown.specific-height {
+    height: 320px;
 }
 
 .dropdown-menu.full-width-dropdown.show {
@@ -149,15 +155,14 @@ body {
 }
 
 .fixed-top.sticked .dropdown-menu.full-width-dropdown.show {
-    top: 46px;
+    top: 43px;
 }
 
 .full-width-dropdown .container-fluid {
-    padding-left: 80px;
-    padding-right: 80px;
+    max-width: 1760px;
+    padding: 0;
     color: #242424;
-    font-size: 18px;
-    font-family: Inter;
+    font-size: 16px;
 }
 
 .full-width-dropdown .container-fluid.industry h6 {
@@ -174,13 +179,15 @@ body {
 }
 
 .full-width-dropdown .col {
-    padding: 15px;
+    max-width: 198px;
+    padding: 16px;
     text-align: left;
 }
 
 .full-width-dropdown h6 {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 24px;
 }
 
 .full-width-dropdown ul {
@@ -188,7 +195,7 @@ body {
 }
 
 .full-width-dropdown li {
-    margin-bottom: 5px;
+    margin-bottom: 16px;
 }
 
 /* Use for linking - To be implemented */
@@ -196,7 +203,6 @@ body {
     color: #000;
     text-decoration: none;
     display: block;
-    padding: 5px 0;
 }
 
 .full-width-dropdown a:hover {
@@ -209,13 +215,27 @@ body {
 
 .nav-link[aria-expanded="true"] {
     border-bottom: 4px solid black;
-    padding-bottom: 16px;
+    padding-bottom: 12px;
 }
 
+.fixed-top.sticked .nav-item .nav-link[aria-expanded="true"] {
+    border-bottom: 4px solid black;
+    padding-bottom: 5px;
+}
+
+
+/* For Regions tab */
+.list-unstyled.vertical-list {
+    display: block !important;
+}
+
+.list-unstyled.vertical-list li {
+    margin-bottom: 5px;
+}
 /* THIRD ROW */
 .third-row-nav {
     background-color: white;
-    margin-top: 16px;
+    margin-top: 8px; /* was 16px; */
     padding-left: 221px;
     padding-right: 221px;
     width: 100%;
@@ -305,12 +325,12 @@ body {
     background-color: white;
     position: absolute;
     border: 1px #D7D7D7 solid;
-    top: 168px;
+    top: 152px; /* Previously 168px; */
     left: 0;
 }
 
 .sticked .separator {
-    top: 121px;
+    top: 110px;
 }
 
 /* PRESS RELEASE BODY */
@@ -318,6 +338,8 @@ body {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1462px;
         padding: 0;
+        transition: transform 0.3s ease;
+        will-change: transform;
     }
 
     .container.related-press-releases, .container.related-events {
