@@ -24,8 +24,24 @@
     <body class="content-inner">
         <div class="container-fluid body-container p-0">
             <header id="header" class="fixed-top">
-                <section class="top-nav"> <!-- First Row - Timezones -->
-                    <div class="d-flex align-items-center justify-content-center w-100">
+                <section class="top-nav"> <!-- First Row - Language, Timezones -->
+                    <div class="d-flex align-items-center w-100">
+                        <!-- Language Dropdown -->
+                        <div class="p-1 p-md-2 bd-highlight nav-left d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 12 13" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0.5C9.31371 0.5 12 3.18629 12 6.5C12 9.81371 9.31371 12.5 6 12.5C2.68629 12.5 0 9.81371 0 6.5C0 3.18629 2.68629 0.5 6 0.5ZM6 11.4091C6.06227 11.4091 6.4751 11.3038 6.93535 10.2912C7.13742 9.84666 7.30876 9.30149 7.43145 8.68182H4.56855C4.69125 9.30149 4.86258 9.84666 5.06465 10.2912C5.5249 11.3038 5.93773 11.4091 6 11.4091ZM4.41274 7.59091H7.58726C7.61923 7.2414 7.63636 6.87665 7.63636 6.5C7.63636 6.12335 7.61923 5.7586 7.58726 5.40909H4.41274C4.38077 5.7586 4.36364 6.12335 4.36364 6.5C4.36364 6.87665 4.38077 7.2414 4.41274 7.59091ZM4.56855 4.31818C4.69125 3.69851 4.86258 3.15334 5.06465 2.70878C5.5249 1.69624 5.93773 1.59091 6 1.59091C6.06227 1.59091 6.4751 1.69624 6.93535 2.70878C7.13742 3.15334 7.30876 3.69851 7.43145 4.31818H4.56855ZM8.6823 5.40909C8.71184 5.76285 8.72727 6.12746 8.72727 6.5C8.72727 6.87254 8.71184 7.23715 8.6823 7.59091H10.7874C10.8671 7.24006 10.9091 6.87494 10.9091 6.5C10.9091 6.12506 10.8671 5.75994 10.7874 5.40909H8.6823ZM10.3988 4.31818H8.54135C8.37469 3.37933 8.10365 2.55548 7.7596 1.91568C8.91125 2.358 9.85395 3.22179 10.3988 4.31818ZM3.45865 4.31818H1.60119C2.14605 3.22179 3.08875 2.358 4.2404 1.91568C3.89635 2.55548 3.62531 3.37933 3.45865 4.31818ZM1.21255 5.40909H3.3177C3.28816 5.76285 3.27273 6.12746 3.27273 6.5C3.27273 6.87254 3.28816 7.23715 3.3177 7.59091H1.21255C1.13294 7.24006 1.09091 6.87494 1.09091 6.5C1.09091 6.12506 1.13294 5.75994 1.21255 5.40909ZM7.7596 11.0843C8.10365 10.4445 8.37469 9.62067 8.54135 8.68182H10.3988C9.85395 9.77821 8.91125 10.642 7.7596 11.0843ZM4.2404 11.0843C3.08875 10.642 2.14605 9.77821 1.60119 8.68182H3.45865C3.62531 9.62067 3.89635 10.4445 4.2404 11.0843Z" fill="#999999"/>
+                            </svg>
+                            <div class="global-dropdown">English
+                                <ul class="global-dropdown-menu">
+                                    <li><a href="#">Simplified Chinese</a></li>
+                                    <li><a href="#">Traditional Chinese</a></li>
+                                    <li><a href="#">Korea</a></li>
+                                    <li><a href="#">Japan</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Timezones -->
                         <div class="p-1 p-md-2 bd-highlight nav-middle d-none d-sm-block">
                             <div class="d-flex justify-content-center gap-4 flex-wrap">
                                 <p class="d-none d-lg-block"><span id='current-date'></span></p>
@@ -91,7 +107,7 @@
                                         <div class="col">
                                             <h6>China</h6>
                                             <ul class="list-unstyled">
-                                                <li>One</li>
+                                                <li>Legend Holdings</li>
                                                 <li>Two</li>
                                                 <li>Three</li>
                                                 <li>Four</li>
@@ -113,25 +129,36 @@
                                         <div class="col">
                                             <h6>Indonesia</h6>
                                             <ul class="list-unstyled">
-                                                <li>One</li>
-                                                <li>Two</li>
+                                                <li>Pertamia</li>
+                                                <li>PIS</li>
                                                 <li>Three</li>
                                                 <li>Four</li>
                                                 <li>Five</li>
                                             </ul>
                                         </div>
-                                        <!-- Column 5: Japan -->
+                                         <!-- Column 5: Korea -->
+                                         <div class="col">
+                                            <h6>Korea</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Samsung</li>
+                                                <li>Eisai</li>
+                                                <li>Fujitsu</li>
+                                                <li>Hitachi</li>
+                                                <li>Tanaka</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 6: Japan -->
                                         <div class="col">
                                             <h6>Japan</h6>
                                             <ul class="list-unstyled">
-                                                <li>One</li>
-                                                <li>Two</li>
-                                                <li>Three</li>
-                                                <li>Four</li>
-                                                <li>Five</li>
+                                                <li>MHI</li>
+                                                <li>Eisai</li>
+                                                <li>Fujitsu</li>
+                                                <li>Hitachi</li>
+                                                <li>Tanaka</li>
                                             </ul>
                                         </div>
-                                        <!-- Column 6: Malaysia -->
+                                        <!-- Column 7: Malaysia -->
                                         <div class="col">
                                             <h6>Malaysia</h6>
                                             <ul class="list-unstyled">
@@ -142,9 +169,42 @@
                                                 <li>Five</li>
                                             </ul>
                                         </div>
-                                        <!-- Column 7: Singapore -->
+                                        <!-- Column 8: Singapore -->
                                         <div class="col">
                                             <h6>Singapore</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 9: Thailand -->
+                                        <div class="col">
+                                            <h6>Thailand</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 10: Australia -->
+                                        <div class="col">
+                                            <h6>Australia</h6>
+                                            <ul class="list-unstyled">
+                                                <li>One</li>
+                                                <li>Two</li>
+                                                <li>Three</li>
+                                                <li>Four</li>
+                                                <li>Five</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 11: Featured -->
+                                        <div class="col">
+                                            <h6>Featured</h6>
                                             <ul class="list-unstyled">
                                                 <li>One</li>
                                                 <li>Two</li>
@@ -166,28 +226,133 @@
                             <ul class="dropdown-menu full-width-dropdown" aria-labelledby="regionDropdown">
                                 <div class="container-fluid px-8">
                                     <div class="row">
-                                        <!-- Column 1: Asia -->
+                                        <!-- Column 1: Europe -->
                                         <div class="col">
-                                            <li>ASIA</li>
+                                            <ul class="list-unstyled header">
+                                                <li>EUROPE</li>
+                                            </ul>
                                         </div>
                                         <div class="col">
-                                            <li>Greater China</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>East Asia</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>Southeast Asia</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>South Asia</li>
-                                            <li>&nbsp;</li>
-                                            <li>Australasia</li>
+                                            <ul class="list-unstyled header">
+                                                <li>Western</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Central</li>
+                                                <li>&nbsp;</li>
+                                                <li>Eastern</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled">
+                                                <li>UK</li>
+                                                <li>France</li>
+                                                <li>Germany</li>
+                                                <li>Italy</li>
+                                                <li>Spain</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Slovakia</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Estonia</li>
+                                                <li>Lithuania</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 2: Middle East -->
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>MIDDLE EAST</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>AFRICA</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>UAE</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>MENA</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Northern</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Central</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Southern</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled">
+                                                <li>Abu Dhabi</li>
+                                                <li>Bahrain</li>
+                                                <li>Dubai</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Egypt</li>
+                                                <li>Israel</li>
+                                                <li>Lebanon</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Algeria</li>
+                                                <li>Jordan</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Nigeria</li>
+                                                <li>Kenya</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>South Africa</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Column 3: Asia -->
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>ASIA</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>Greater China</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>East Asia</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Southeast Asia</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>South Asia</li>
+                                                <li>&nbsp;</li>
+                                                <li>Australasia</li>
+                                            </ul>
                                         </div>
                                         <div class="col">
                                             <ul class="list-unstyled">
@@ -219,6 +384,44 @@
                                                 <li>New Zealand</li>
                                             </ul>
                                         </div>
+                                        <!-- Column 4: Americas -->
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>AMERICAS</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled header">
+                                                <li>North</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Central</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>&nbsp;</li>
+                                                <li>Southeast Asia</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled">
+                                                <li>Canada</li>
+                                                <li>United States</li>
+                                                <li>Carribean</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Mexico</li>
+                                                <li>Belize</li>
+                                                <li>Panama</li>
+                                                <li>&nbsp;</li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li>Argentina</li>
+                                                <li>Brazil</li>
+                                                <li>Columbia</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </ul>
@@ -234,39 +437,39 @@
                                     <div class="row">
                                         <!-- Column 1: Business -->
                                         <div class="col">
-                                            <h6>Business</h6>
+                                            <h6>BUSINESS</h6>
                                         </div>
                                         <!-- Column 2: Communications -->
                                         <div class="col">
-                                            <h6>Communications</h6>
+                                            <h6>COMMUNICATIONS</h6>
                                         </div>
                                         <!-- Column 3: Financial -->
                                         <div class="col">
-                                            <h6>Financial</h6>
+                                            <h6>FINANCIAL</h6>
                                         </div>
                                         <!-- Column 4: Healthcare -->
                                         <div class="col">
-                                            <h6>Healthcare</h6>
+                                            <h6>HEALTHCARE</h6>
                                         </div>
                                         <!-- Column 5: Industrial -->
                                         <div class="col">
-                                            <h6>Industrial</h6>
+                                            <h6>INDUSTRIAL</h6>
                                         </div>
                                         <!-- Column 6: Lifestyle -->
                                         <div class="col">
-                                            <h6>Lifestyle</h6>
+                                            <h6>LIFESTYLE</h6>
                                         </div>
                                         <!-- Column 7: Sustainability -->
                                         <div class="col">
-                                            <h6>Sustainability</h6>
+                                            <h6>SUSTAINABILITY</h6>
                                         </div>
                                         <!-- Column 8: Technology -->
                                         <div class="col">
-                                            <h6>Technology</h6>
+                                            <h6>TECHNOLOGY</h6>
                                         </div>
                                         <!-- Column 9: Cryptocurrency -->
                                         <div class="col">
-                                            <h6>Cryptocurrency</h6>
+                                            <h6>CRYPTOCURRENCY</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -289,7 +492,7 @@
                                                 <li><a href="#">Daily News</a></li>
                                                 <li><a href="#">Government</a></li>
                                                 <li><a href="#">Human Resources</a></li>
-                                                <li><a href="#">Community</a></li>
+                                                <li><a href="#">Local Biz</a></li>
                                                 <li><a href="#">Startups</a></li>
                                                 <li><a href="#">Trade Shows</a></li>
                                             </ul>
@@ -299,10 +502,10 @@
                                             <h6>COMMUNICATIONS</h6>
                                             <ul class="list-unstyled">
                                                 <li><a href="#">Advertising</a></li>
-                                                <li><a href="#">TV, Film & Satellite</a></li>
+                                                <li><a href="#">Broadcast & Satellite</a></li>
                                                 <li><a href="#">Media & Marketing</a></li>
                                                 <li><a href="#">Telecoms & 5G</a></li>
-                                                <li><a href="#">Mobilit & Apps</a></li>
+                                                <li><a href="#">Mobility & Apps</a></li>
                                             </ul>
                                         </div>
                                         <!-- Column 3: Financial -->
@@ -315,7 +518,8 @@
                                                 <li><a href="#">Exchanges & Software</a></li>
                                                 <li><a href="#">FinTech</a></li>
                                                 <li><a href="#">Funds & Equities</a></li>
-                                                <li><a href="#">Personal & Cosmetics</a></li>
+                                                <li><a href="#">Legal & Compliance</a></li>
+                                                <li><a href="#">VC & PE</a></li>
                                                 <li><a href="#">Real Estate, REITs</a></li>
                                             </ul>
                                         </div>
@@ -350,30 +554,29 @@
                                          <div class="col">
                                             <h6>LIFESTYLE</h6>
                                             <ul class="list-unstyled">
-                                                <li><a href="#">Design & Art</a></li>
+                                                <li><a href="#">Art & Design</a></li>
+                                                <li><a href="#">Beauty & Cosmetics</a></li>
                                                 <li><a href="#">Education</a></li>
-                                                <li><a href="#">eSports & Gaming</a></li>
+                                                <li><a href="#">Gaming & Web3</a></li>
                                                 <li><a href="#">Fashion & Apparel</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
+                                                <li><a href="#">Motorsports</a></li>
+                                                <li><a href="#">Regional & Lifestyle</a></li>
                                                 <li><a href="#">Sports & Recreation</a></li>
-                                                <li><a href="#">Innovation</a></li>
-                                                <li><a href="#">Lifestyle</a></li>
+                                                <li><a href="#">Travel & Hospitality</a></li>
                                                 <li><a href="#">Retail & eCommerce</a></li>
+                                                <li><a href="#">Watches & Jewelry</a></li>
                                             </ul>
                                         </div>
                                          <!-- Column 7: Sustainability -->
                                          <div class="col">
                                             <h6>SUSTAINABILITY</h6>
                                             <ul class="list-unstyled">
-                                                <li><a href="#">Design & Art</a></li>
-                                                <li><a href="#">Education</a></li>
-                                                <li><a href="#">eSports & Gaming</a></li>
-                                                <li><a href="#">Fashion & Apparel</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Sports & Recreation</a></li>
-                                                <li><a href="#">Innovation</a></li>
-                                                <li><a href="#">Lifestyle</a></li>
-                                                <li><a href="#">Retail & eCommerce</a></li>
+                                                <li><a href="#">AgriTech</a></li>
+                                                <li><a href="#">Energy</a></li>
+                                                <li><a href="#">Environment & ESG</a></li>
+                                                <li><a href="#">EVs, Transportation</a></li>
+                                                <li><a href="#">Smart Cities</a></li>
+                                                <li><a href="#">Water</a></li>
                                             </ul>
                                         </div>
                                         <!-- Column 8: Technology -->
@@ -386,8 +589,7 @@
                                                 <li><a href="#">CyberSecurity</a></li>
                                                 <li><a href="#">Digitalization</a></li>
                                                 <li><a href="#">Electronics</a></li>
-                                                <li><a href="#">Innovation</a></li>
-                                                <li><a href="#">Materials & Nanotech</a></li>
+                                                <li><a href="#">Materials, Nanotech</a></li>
                                             </ul>
                                         </div>
                                         <!-- Column 9: CryptoCurrency -->
@@ -395,7 +597,7 @@
                                             <h6>CRYPTOCURRENCIES</h6>
                                             <ul class="list-unstyled">
                                                 <li><a href="#">Blockchain</a></li>
-                                                <li><a href="#">Crypto, Exchange</a></li>
+                                                <li><a href="#">Crypto & Exchange</a></li>
                                                 <li><a href="#">ICO & Tokens</a></li>
                                                 <li><a href="#">Metaverse & Games</a></li>
                                                 <li><a href="#">Mining & Staking</a></li>
@@ -460,21 +662,6 @@
                         <li class="nav-item">
                             <a class="nav-link px-8" href="#">Events</a>
                         </li>
-
-                        <!-- Selected Language Dropdown -->
-                        <!-- Removed for now as this will be placed at the top-left of the page -->
-                        <!-- <li class="nav-item ms-auto"> 
-                            <button class="dropdown-button" id="languageDropdown" aria-expanded="false">
-                                <div class="icon"><img src="../Assets/globe-icon.svg" alt="Globe Icon" /></div>
-                                <div class="nav-link px-8 label">English</div>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="#">Simplified Chinese</a>
-                                <a href="#">Traditional Chinese</a>
-                                <a href="#">Korean</a>
-                                <a href="#">Japanese</a>
-                            </div>
-                        </li> -->
                     </ul>
                 </nav>                
                 <div class="separator"></div>
