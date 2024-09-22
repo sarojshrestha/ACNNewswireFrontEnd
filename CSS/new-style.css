@@ -48,6 +48,7 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    width: 80px;
 }
 
 .global-dropdown-menu {
@@ -60,7 +61,7 @@ body {
     left: 0;
     opacity: 0;
     top: 100%;
-    min-width: 160px;
+    min-width: 216px;
     z-index: 1000;
 }
 
@@ -72,7 +73,7 @@ body {
     width: 156px;
     -webkit-transition: all .5s, background, 2s .5s linear;
     transition: all .5s, background 2s .5s linear;
-    background-color: #FAFAFA;
+    background-color:  #f1f1f1;
 }
 
 .global-dropdown-menu li a {
@@ -86,7 +87,7 @@ body {
 }
 
 .global-dropdown-menu li a:hover {
-    background-color: #f1f1f1;
+    background-color: #999;
 }
 
 .top-nav .nav-left {
@@ -215,6 +216,33 @@ body {
     width: 100%;
     margin: 0;
     padding: 16px 0;
+}
+
+/* Company Tab */
+.row.mt-3 {
+    margin-top: 16px;
+}
+
+.col-label {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control.search-company {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 14px;
+}
+
+.form-control.search-company:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.form-control.search-company::placeholder {
+    color: #7B7B7B;
+    font-size: 14px;
 }
 
 .full-width-dropdown.specific-height {
