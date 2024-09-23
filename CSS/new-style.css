@@ -607,6 +607,7 @@ hr {
 .press-release-body-container {
     width: 1045px; /* + 32px as adjustment */
     margin-bottom: 32px;
+    gap: 32px;
 }
 
 .press-release-body {
@@ -631,6 +632,79 @@ hr {
     font-family: Inter; 
     font-style: italic; 
     font-weight: 400; 
+}
+
+/* COMPANY INFO CARD */
+.company-info-card .company-info-box {
+    border-radius: 4px;
+    border: 1px solid var(--color-neutral-600, #242424);
+    background: #FFF;
+    width: 267px;
+    height: auto;
+}
+
+.company-info-card .company-info-box .company-info-logo { 
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin: 32px 40px;
+    position: relative;
+}
+
+.company-info-card .company-info-box .company-info-logo img {
+    max-width: 184px;
+    object-fit: cover;
+    display: block;
+}
+
+.company-info-card .company-info-box .company-links {
+    padding: 16px;
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+.company-info-card .company-info-box .company-links p,
+.company-info-card .company-info-box .company-contact p {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.company-info-card .company-info-box .company-links ul li,
+.company-info-card .company-info-box .company-contact ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.company-info-card .company-info-box .company-links ul li a,
+.company-info-card .company-info-box .company-contact ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 216px;
+}
+
+.company-info-card .company-info-box .company-links ul li a i,
+.company-info-card .company-info-box .company-contact ul li i,
+.company-info-card .company-info-box .company-contact ul li a i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.company-info-card .company-info-box .company-info-border {
+    border-bottom: 1px solid var(--color-neutral-600, #242424);
+    margin: 16px;
+}
+
+.company-info-card .company-info-box .company-contact {
+    margin: 8px;
+    margin-left: 16px;
+    width: 100%;
 }
 
 /* BORDER */
