@@ -554,7 +554,7 @@ hr {
     background-repeat: no-repeat;
     height: 32px;
     width: 32px;
-    background-image: url(../Assets/chevron-right.svg);
+    background-image: url(../Assets/press-release-page/chevron-right.svg);
     display: inline-block;
     align-items: center;
     justify-content: center;
@@ -895,12 +895,8 @@ p.title-pr {
     padding-bottom: 24px;
 }
 
-.row {
-    width: 100%;
-}
-
 .event-item img {
-    width: 500px;
+    width: auto;
     height: auto;
 }
 
@@ -938,8 +934,12 @@ p.title-pr {
 
 /* HOME PAGE */
 .home-page-container {
-    margin-top: 32px;
     background-color: white;
+    width: 100%;
+}
+
+.main-hero {
+    margin-top: 32px;
 }
 
 .carousel-desc {
@@ -989,13 +989,13 @@ main {
     padding: 40px 0;
 }
 
-.box-section-header.home-page {
+.box-section-header {
     padding-bottom: 40px;
     font-size: 18px;
 }
 
-.events h1 {
-    padding-bottom: 0;
+.box-section-header h2 {
+    font-weight: 400;
 }
 
 .events .container {
@@ -1052,3 +1052,41 @@ main {
     /* 24px */
     letter-spacing: -0.3px;
 }
+
+/* Latest Release */
+.latest-release .event-item {
+    padding-bottom: 24px;
+}
+
+/* Sectors */
+.hr-client {
+    color: #676565;
+    margin-top: 0;
+    margin-bottom: 40px;
+    border: 1px solid;
+}
+
+.news-items {
+    gap: 32px;
+    padding-bottom: 40px;
+}
+
+.news-items::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+    background-color: #F5F5F5;
+}
+  
+.news-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+  
+.news-items::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.news-items .news-item {
+    min-width: 220px;
+}
+

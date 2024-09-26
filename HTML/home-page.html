@@ -4,16 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../CSS/new-style.css">
-        <title>ACN Newswire</title>
-
-        <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/68324dcdcd.js" crossorigin="anonymous"></script>  
+        <title>ACN Newswire</title>
 
         <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Bootstrap JS (with Popper.js) -->
@@ -21,9 +19,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     </head>
 
-    <body>
+    <body class="home-page">
         <div id="header"></div>
-        <section class="home-page-container">
+        <div class="home-page-container">
             <div class="main-hero">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-inner">
@@ -33,7 +31,7 @@
                                     <div class="col-xl-6 col-lg-4">
                                         <div class="carousel-img">
                                             <img
-                                            src="../Assets/temp-main-image.png"
+                                            src="../Assets/home-page/temp-main-image.png"
                                             class="d-block mx-lg-auto img-fluid"
                                             alt="Experience Eternal Romance with Exquisite Blue Diamonds by ALUXE"
                                             loading="lazy"
@@ -60,7 +58,7 @@
                                     <div class="col-xl-6 col-lg-4">
                                         <div class="carousel-img">
                                             <img
-                                            src="../Assets/temp-main-image-1.png"
+                                            src="../Assets/home-page/temp-main-image-1.png"
                                             class="d-block mx-lg-auto img-fluid"
                                             alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth"
                                             loading="lazy"
@@ -87,7 +85,7 @@
                                     <div class="col-xl-6 col-lg-4">
                                         <div class="carousel-img">
                                             <img
-                                            src="../Assets/temp-main-image.png"
+                                            src="../Assets/home-page/temp-main-image.png"
                                             class="d-block mx-lg-auto img-fluid"
                                             alt="Experience Eternal Romance with Exquisite Blue Diamonds by ALUXE"
                                             loading="lazy"
@@ -116,17 +114,17 @@
                     </div>
                 </div>
             </div>
-            <!-- EVENTS -->
             <main>
+                <!-- EVENTS -->
                 <section class="box-section events" data-aos="fade-top">
-                    <div class="d-flex justify-content-between align-items-center box-section-header home-page">
-                        <h1>Events</h1>
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2 class="flex-grow-1">Events</h2>
                         <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Events</button>
                     </div>
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-xl-4">
                             <div class="event-item">
-                                <img src="../Assets/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
+                                <img src="../Assets/home-page/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
                                 <div class="event-item-desc d-flex flex-column gap-2 pt-4">
                                     <p class="card-label">ASEAN Procurement Innovation Summit</p>
                                     <p class="card-sub-label">Kuala Lumpur, MY</p>
@@ -136,7 +134,7 @@
                         </div>
                         <div class="col-xl-4">
                             <div class="event-item">
-                                <img src="../Assets/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
+                                <img src="../Assets/home-page/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
                                 <div class="event-item-desc d-flex flex-column gap-2 pt-4">
                                     <p class="card-label">ASEAN Procurement Innovation Summit</p>
                                     <p class="card-sub-label">Kuala Lumpur, MY</p>
@@ -146,7 +144,7 @@
                         </div>
                         <div class="col-xl-4">
                             <div class="event-item">
-                                <img src="../Assets/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
+                                <img src="../Assets/home-page/event-picture-1.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="ASEAN Procurement Innovation Summit" />
                                 <div class="event-item-desc d-flex flex-column gap-2 pt-4">
                                     <p class="card-label">ASEAN Procurement Innovation Summit</p>
                                     <p class="card-sub-label">Kuala Lumpur, MY</p>
@@ -156,9 +154,657 @@
                         </div>
                     </div>
                 </section>
+                <!-- LATEST RELEASES -->
+                <section class="box-section latest-release" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Latest Releases</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Latest</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="event-item">
+                                <img src="../Assets/home-page/temp-main-image.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth" />
+                                <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                    <p class="card-label card-label-main">Experience Eternal Romance with Exquisite Blue Diamonds by ALUXE</p>
+                                    <p class="card-sub-label">SUSTAINABILITY &bull; UISC</p>
+                                    <p class="card-date">Sep 23, 2022 05:10 PST</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="event-item">
+                                        <img src="../Assets/home-page/historic_launch.jpg" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth" />
+                                        <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                            <p class="card-label">Historic Launch of UISC Initiative to Address Climate Impact on Earth</p>
+                                            <p class="card-sub-label">SUSTAINABILITY &bull; UISC</p>
+                                            <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="event-item">
+                                        <img src="../Assets/home-page/historic_launch.jpg" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth" />
+                                        <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                            <p class="card-label">Historic Launch of UISC Initiative to Address Climate Impact on Earth</p>
+                                            <p class="card-sub-label">SUSTAINABILITY &bull; UISC</p>
+                                            <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="event-item">
+                                        <img src="../Assets/home-page/temp-main-image.png" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth" />
+                                        <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                            <p class="card-label">Historic Launch of UISC Initiative to Address Climate Impact on Earth</p>
+                                            <p class="card-sub-label">SUSTAINABILITY &bull; UISC</p>
+                                            <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="event-item">
+                                        <img src="../Assets/home-page/historic_launch.jpg" width="504" height="264" class="card-img-top img-fluid rounded-0" alt="Historic Launch of UISC Initiative to Address Climate Impact on Earth" />
+                                        <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                            <p class="card-label">Historic Launch of UISC Initiative to Address Climate Impact on Earth</p>
+                                            <p class="card-sub-label">SUSTAINABILITY &bull; UISC</p>
+                                            <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- BUSINESS -->
+                <hr class="hr-client"/>
+                <section class="box-section business" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Business</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Business</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- COMMUNICATION -->
+                <section class="box-section communication" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Communication</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Communication</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FINANCIAL -->
+                <section class="box-section financial" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Financial</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Financial</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- HEALTHCARE -->
+                <section class="box-section healthcare" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Healthcare</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Healthcare</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- INDUSTRIAL -->
+                <section class="box-section industrial" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Industrial</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Industrial</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- LIFESTYLE -->
+                <section class="box-section lifestyle" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Lifestyle</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Lifestyle</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SUSTAINABILITY -->
+                <section class="box-section sustainability" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Sustainability</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Sustainability</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- TECHNOLOGY -->
+                <section class="box-section technology" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>Technology</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore Technology</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- CRYPTOCURRENCY -->
+                <section class="box-section cryptocurrency" data-aos="fade-top">
+                    <div class="d-flex justify-content-between align-items-center box-section-header">
+                        <h2>CryptoCurrency</h2>
+                        <button type="button" class="btn btn-outline-dark rounded-5 px-4">Explore CryptoCurrency</button>
+                    </div>
+                    <div class="d-flex flex-row align-items-end news-items overflow-x-scroll">              
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                        <div class="news-item w-100">
+                            <img src="../Assets/home-page/value-research-center.png" class="card-img-top img-fluid rounded-0" alt="Value Research Center (VRC) at SSUNGA78: How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future" />
+                            <div class="event-item-desc d-flex flex-column gap-2 pt-4">
+                                <p class="card-label card-label-main">Value Research Center (VRC) at SSUNGA78: 'How Purpose, Value, and Impact will Drive a Sustainable Post- SDG Future'</p>
+                                <p class="card-sub-label">CORE HEALTHCARE</p>
+                                <p class="card-date">Aug 15, 2023 11:43 HKT/SGT</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
-        </section>
-        <div style="margin-bottom: 300px;"></div>
+        </div>
         <div id="footer"></div>
         <script src="../JS/app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

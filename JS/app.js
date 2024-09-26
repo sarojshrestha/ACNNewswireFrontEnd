@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // To make the header sticky and fixed
             window.addEventListener("scroll", function() {
                 const selectHeader = document.querySelector("#header.fixed-top");
-                const container = document.querySelector(".container");
+                const container =  document.querySelector("#header + div");
 
                 if (selectHeader && container) {
                     if (window.scrollY > 50) {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         container.style.marginTop = "0"; // reset margin-top
                     }
                 }
+
             });
 
             // Call updateTime() after the new content is loaded
@@ -37,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
+    
+    AOS.init();
 });
 
 function updateTime() {
@@ -71,4 +74,63 @@ function getLocalDate(){
 function getTimePerTimezone(timeZone) {
     const options = { hour: '2-digit', minute: '2-digit', hour12: false};
     return new Date().toLocaleTimeString('en-US', { timeZone: timeZone, ...options });
+}
+
+
+// Some Preparations
+// COMPANY DROPDOWN
+// Featured Companies
+function fetchFeaturedCompanies() {
+    const companiesListEndpoint = '<insert sample endpoint here>'; 
+
+    fetch(companiesListEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            let companyList = document.getElementById('featured-companies-list');
+            companyList.innerHTML = '';
+
+            data.forEach(company => {
+                let companyItem = document.createElement('li');
+                let companyLink = document.createElement('a');
+                companyLink.href = '#'; // Insert company link here
+                companyLink.textContent = company.name; // Company name will be displayed
+                companyItem.appendChild(companyLink);
+                companyList.appendChild(companyItem);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching featured companies:', error);
+        });
+}
+// First 16 Companies
+async function fetchCompanies() {
+    try {
+        const response = await fetch('<insert list of companies API>');
+        const companies = await response.json(); // should be first 16 companies
+        const firstCompanies = companies.slice(0, 8);
+        const secondCompanies = companies.slice(8);
+
+        const companyList1 = document.getElementById('companies-list-1');
+        firstCompanies.forEach(company => {
+            let companyItem = document.createElement('li');
+            let companyLink = document.createElement('a');
+            companyLink.href = '#'; // Insert company link here
+            companyLink.textContent = company.name; // Company name will be displayed
+            companyItem.appendChild(companyLink);
+            companyList1.appendChild(companyItem);
+        });
+
+        const companyList2 = document.getElementById('companies-list-2');
+        secondCompanies.forEach(company => {
+            let companyItem = document.createElement('li');
+            let companyLink = document.createElement('a');
+            companyLink.href = '#'; // Insert company link here
+            companyLink.textContent = company.name; // Company name will be displayed
+            companyItem.appendChild(companyLink);
+            companyList2.appendChild(companyItem);
+        });
+
+    } catch (error) {
+        console.error('Error fetching companies:', error);
+    }
 }
