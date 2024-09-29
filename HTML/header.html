@@ -3,85 +3,802 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../CSS/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <!-- Noto Sans Font -->
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap"> -->
         <title>ACN Newswire</title>
-        <!-- Script to be used soon -->
-        <!-- <script>
-            fetch('https://www.acnnewswire.com/acnnewswireapi/api/v1/News/AllNews')
-                .then(response => console.log(response.json()))
-                .catch(error => console.error(error));
-        </script> -->        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>        
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+        <!-- Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <script src="https://kit.fontawesome.com/68324dcdcd.js" crossorigin="anonymous"></script>  
+
+        <style type="text/css">
+            .navbar .megamenu{ padding: 1rem; }
+            /* DESKTOP VIEW */
+            @media all and (min-width: 992px) {
+              .navbar .has-megamenu{position:static!important;}
+              .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+            }	
+            
+            /* MOBILE VIEW */
+            @media(max-width: 991px){
+              .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+                overflow-y: auto;
+                  max-height: 90vh;
+                  margin-top:10px;
+              }
+            }
+        </style>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                /////// Prevent closing from click inside dropdown
+                document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                    element.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    });
+                });
+                /////// remove show class on click on other nav-item
+                const companyCollapsible = document.getElementById('companyCollapse')
+                companyCollapsible.addEventListener('show.bs.collapse', event => {
+                    console.log(companyCollapsible)
+                })
+            }); 
+        </script>
     </head>
 
     <body>
-        <div class="header-container">
-            <div class="bar-container">
-                <div class="logo-image"></div>
-            </div>
-            <div class="search-bar">
-                <input type="search" class="search-input" placeholder="Search by company, region, sector, industry" aria-label="Search">
-                <button class="search-button" aria-label="Search">
-                    <img src="../Assets/search-icon.svg" alt="Search Icon">
-                </button>
-            </div>
-            <a href="https://acnnewswire.com/aboutus/" class="button-link">
-                <div class="button about">
-                    <div class="button-content">About</div>
-                </div>
-            </a>
-            <a href="https://acnnewswire.com/contactus/" class="button-link">
-                <div class="button contact">
-                    <div class="button-content">Contact</div>
-                </div>
-            </a>
-            <a href="https://acnnewswire.com/client/login.aspx" class="button-link">
-                <div class="button login">
-                    <div class="button-content">Login</div>
-                </div>
-            </a>
-            <a href="https://acnnewswire.com/client/login.aspx" class="button-link">
-                <div class="button register">
-                    <div class="button-content">Register</div>
-                </div>
-            </a>
-            <div class="button company">
-                <div class="button-content">Company</div>
-            </div>
-            <div class="button region">
-                <div class="button-content">Region</div>
-            </div>
-            <div class="button sector" >
-                <div class="button-content">Sector</div>
-            </div>
-            <div class="button industry">
-                <div class="button-content">Industry</div>
-            </div>
-            <div class="button language">
-                <div class="button-content">Language</div>
-            </div>
-            <div class="button events">
-                <div class="button-content">Events</div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown-button">
-                    <div class="icon">
-                        <img src="../Assets/globe-icon.svg" alt="Globe Icon" />
+        <!-- <div class="container-fluid body-container p-0"> -->
+        <header id="header" class="fixed-top">
+            <section class="top-nav"><!-- First Row - Language, Timezones -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Language Dropdown -->
+                    <div class="p-1 p-md-2 bd-highlight nav-left d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0.5C9.31371 0.5 12 3.18629 12 6.5C12 9.81371 9.31371 12.5 6 12.5C2.68629 12.5 0 9.81371 0 6.5C0 3.18629 2.68629 0.5 6 0.5ZM6 11.4091C6.06227 11.4091 6.4751 11.3038 6.93535 10.2912C7.13742 9.84666 7.30876 9.30149 7.43145 8.68182H4.56855C4.69125 9.30149 4.86258 9.84666 5.06465 10.2912C5.5249 11.3038 5.93773 11.4091 6 11.4091ZM4.41274 7.59091H7.58726C7.61923 7.2414 7.63636 6.87665 7.63636 6.5C7.63636 6.12335 7.61923 5.7586 7.58726 5.40909H4.41274C4.38077 5.7586 4.36364 6.12335 4.36364 6.5C4.36364 6.87665 4.38077 7.2414 4.41274 7.59091ZM4.56855 4.31818C4.69125 3.69851 4.86258 3.15334 5.06465 2.70878C5.5249 1.69624 5.93773 1.59091 6 1.59091C6.06227 1.59091 6.4751 1.69624 6.93535 2.70878C7.13742 3.15334 7.30876 3.69851 7.43145 4.31818H4.56855ZM8.6823 5.40909C8.71184 5.76285 8.72727 6.12746 8.72727 6.5C8.72727 6.87254 8.71184 7.23715 8.6823 7.59091H10.7874C10.8671 7.24006 10.9091 6.87494 10.9091 6.5C10.9091 6.12506 10.8671 5.75994 10.7874 5.40909H8.6823ZM10.3988 4.31818H8.54135C8.37469 3.37933 8.10365 2.55548 7.7596 1.91568C8.91125 2.358 9.85395 3.22179 10.3988 4.31818ZM3.45865 4.31818H1.60119C2.14605 3.22179 3.08875 2.358 4.2404 1.91568C3.89635 2.55548 3.62531 3.37933 3.45865 4.31818ZM1.21255 5.40909H3.3177C3.28816 5.76285 3.27273 6.12746 3.27273 6.5C3.27273 6.87254 3.28816 7.23715 3.3177 7.59091H1.21255C1.13294 7.24006 1.09091 6.87494 1.09091 6.5C1.09091 6.12506 1.13294 5.75994 1.21255 5.40909ZM7.7596 11.0843C8.10365 10.4445 8.37469 9.62067 8.54135 8.68182H10.3988C9.85395 9.77821 8.91125 10.642 7.7596 11.0843ZM4.2404 11.0843C3.08875 10.642 2.14605 9.77821 1.60119 8.68182H3.45865C3.62531 9.62067 3.89635 10.4445 4.2404 11.0843Z" fill="#999999"/>
+                        </svg>
+                        <div class="global-dropdown">English
+                            <ul class="global-dropdown-menu">
+                                <li><a href="#">简体中文 (zh-CN)</a></li>
+                                <li><a href="#">繁體中文 (zh-CHT)</a></li>
+                                <li><a href="#">한국어 (ko-KR)</a></li>
+                                <li><a href="#">日本語 (ja-JP)</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="button-content">English</div>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Simplified Chinese</a>
-                    <a href="#">Traditional Chinese</a>
-                    <a href="#">Korean</a>
-                    <a href="#">Japanese</a>
+                    <!-- Timezones -->
+                    <div class="p-1 p-md-2 bd-highlight nav-middle d-none d-sm-block">
+                        <div class="d-flex justify-content-center gap-4">
+                            <p class="d-none d-lg-block"><span id='current-date'></span></p>
+                            <p class="d-none d-lg-block">Mumbai <span id='mumbai'></span> (UTC +5:30)</p>
+                            <p class="d-none d-lg-block">Bangkok <span id='bangkok'></span> (UTC +7)</p>
+                            <p class="d-none d-lg-block">SG <span id='singapore'></span> (UTC +8)</p>
+                            <p class="d-none d-lg-block">HK <span id='hongkong'></span> (UTC +8)</p>
+                            <p class="d-none d-lg-block">Tokyo <span id='tokyo'></span> (UTC +9)</p>
+                            <p class="d-none d-lg-block">Sydney <span id='sydney'></span> (UTC +10)</p>
+                        </div>
+                    </div>
+                    <!-- Clients, Journalists, and Publishers -->
+                    <div class="p-1 p-md-2 bd-highlight nav-right pe-1 pe-lg-5">
+                        <ul class="nav d-flex gap-2 justify-content-md-end justify-content-end">
+                            <li class="nav-item"><a href="#">Clients</a></li>
+                            <li class="nav-item"><a href="#">Journalists</a></li>
+                            <li class="nav-item"><a href="#">Publishers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="py-3 mb-0 mb-lg-4 main-nav pb-xl-0"> <!-- Navigation bar -->
+                <div class="container-fluid mx-0 px-0">
+                    <div class="nav-logo d-flex flex-wrap align-items-center justify-content-between">
+                        <!-- Logo -->
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+                            <img src="../Assets/logo.svg" alt="ACN Newswire logo"/>
+                        </a>
+                        <!-- Search Bar -->
+                        <form class="col-12 col-xl-7 col-lg-5 mb-3 mb-lg-0 site-search d-none d-xl-block" role="search">
+                            <div class="input-group">
+                                <input type="search" class="form-control form-control-search border-0 bg-transparent" aria-label="Search" placeholder="News releases by Company, Region, Sector, Industry, Language & Event" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-search" type="button">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form> 
+                        <div class="nav-black col-12 col-lg-auto mb-2 justify-content-center mb-md-0 d-none d-xl-block">
+                            <ul class="nav gap-2">
+                                <li><a href="https://acnnewswire.com/aboutus/" class="nav-link px-1">About</a></li>
+                                <li><a href="https://acnnewswire.com/contactus/" class="nav-link px-1">Contact</a></li>
+                                <li><a href="https://acnnewswire.com/client/login.aspx" class="btn btn-outline-dark rounded-5">Login</a></li>
+                                <li><a href="https://acnnewswire.com/client/login.aspx" class="btn btn-outline-black rounded-5 text-light">Register</a></li>
+                            </ul>
+                        </div>
+                        <!-- Offcanvas Navbar -->
+                        <nav class="navbar navbar-expand-xl bg-body-tertiary py-0" aria-label="Light offcanvas navbar">
+                            <div class="container-fluid g-0">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="nav d-flex gap-2 justify-content-md-end justify-content-start d-lg-flex d-xl-none">
+                                            <li class="nav-item"><a href="#">Clients</a></li>
+                                            <li class="nav-item"><a href="#">Journalists</a></li>
+                                            <li class="nav-item"><a href="#">Publishers</a></li>
+                                        </ul>
+                                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-toggle" href="#" data-bs-target="#companyCollapse" aria-expanded="false" aria-controls="companyCollapse" data-bs-toggle="collapse">Company</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-toggle" href="#" data-bs-target="#regionCollapse" aria-expanded="false" aria-controls="regionCollapse" data-bs-toggle="collapse">Region</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-toggle" href="#" data-bs-target="#sectorCollapse" aria-expanded="false" aria-controls="sectorCollapse" data-bs-toggle="collapse">Sector</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-toggle" href="#" data-bs-target="#industryCollapse" aria-expanded="false" aria-controls="industryCollapse" data-bs-toggle="collapse">Industry</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link dropdown-toggle" href="#" data-bs-target="#languageCollapse" aria-expanded="false" aria-controls="languageCollapse" data-bs-toggle="collapse">Language</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Events</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li class="nav-item d-lg-block d-xl-none">
+                                                <a class="nav-link" href="#">About</a>
+                                            </li>
+                                            <li class="nav-item d-lg-block d-xl-none">
+                                                <a class="nav-link" href="#">Contact</a>
+                                            </li>
+                                        </ul>
+                                        <div class="nav-black col-12 col-lg-auto mt-4 justify-content-center mb-md-0 d-lg-block d-xl-none">
+                                            <ul class="nav gap-2">
+                                                <li><a href="#" class="btn btn-outline-dark rounded-5">Login</a></li>
+                                                <li><a href="#" class="btn btn-outline-black rounded-5 text-light">Register</a></li>
+                                            </ul>
+                                        </div>
+                                        <form class="d-flex mt-5 d-block d-xl-none" role="search">
+                                            <div class="input-group">
+                                                <input type="search" class="form-control form-control-search border-0 bg-transparent" aria-label="Search" placeholder="News releases by Company, Region, Sector, Industry, Language & Event" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-search" type="button">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
-            <div class="separator"></div>
-        </div>
+            <!-- DROPDOWN -->
+            <div id="collapseParent">
+                <!-- Company -->
+                <div class="dropdown-menu megamenu collapse w-100 border-0 rounded-0" data-bs-parent="#collapseParent" role="menu" id="companyCollapse">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="dropdown-header d-lg-flex d-xl-none p-0">
+                            <button type="button" class="btn-close" data-bs-target="#companyCollapse" aria-expanded="false" aria-controls="companyCollapse" data-bs-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-xxl-between">
+                        <!-- Column 1: Featured Companies -->
+                        <div class="dropdown-menu-section company">
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">FEATURED COMPANIES</p>
+                                <div id="featured-companies-list">
+                                    <a href="#">ASE Technology Holding Co., Ltd.</a>
+                                    <a href="#">Azbil Corporation</a>
+                                    <a href="#">Japan Tobacco Inc.</a>
+                                    <a href="#">Daiwa House REIT Investment Corporation</a>
+                                    <a href="#">Kawasaki Kisen Kaisha, Ltd.</a>
+                                </div>
+                                
+                                
+                                <!-- <ul class="list-unstyled" id="featured-companies-list">
+                                    <li><a href="#">ASE Technology Holding Co., Ltd.</a></li>
+                                    <li><a href="#">Azbil Corporation</a></li>
+                                    <li><a href="#">Japan Tobacco Inc.</a></li>
+                                    <li><a href="#">Daiwa House REIT Investment Corporation</a></li>
+                                    <li><a href="#">Kawasaki Kisen Kaisha, Ltd.</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <!-- Column 2: Companies -->
+                        <div class="dropdown-menu-section company">
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">COMPANIES</p>
+                                <div id="companies-list">
+                                    <a href="#">Aeon Co., Ltd.</a>
+                                    <a href="#">Altria Group, Inc.</a>
+                                    <a href="#">AstraZeneca</a>
+                                    <a href="#">Barry Callebaut AG</a>
+                                    <a href="#">Boston Consulting Group</a>
+                                    <a href="#">Canadian National Railway Company</a>
+                                    <a href="#">CSX Corporation</a>
+                                    <a href="#">CVS Health</a>
+                                </div>
+                                <!-- <ul class="list-unstyled" id="featured-companies-list">
+                                    <li><a href="#">Aeon Co., Ltd.</a></li>
+                                    <li><a href="#">Altria Group, Inc.</a></li>
+                                    <li><a href="#">AstraZeneca</a></li>
+                                    <li><a href="#">Barry Callebaut AG</a></li>
+                                    <li><a href="#">Boston Consulting Group</a></li>
+                                    <li><a href="#">Canadian National Railway Company</a></li>
+                                    <li><a href="#">CSX Corporation</a></li>
+                                    <li><a href="#">CVS Health</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <!-- Column 3: Companies -->
+                        <div class="dropdown-menu-section company">
+                            <div class="d-flex flex-column">
+                                <h6></h6>
+                                <div id="companies-list">
+                                    <a href="#">Daiwa House Industry Co., Ltd.</a>
+                                    <a href="#">Deustche Telekom AG</a>
+                                    <a href="#">Formosa Chemicals & Fibre Corporation</a>
+                                    <a href="#">Fujitsu Limited</a>
+                                    <a href="#">General Motors Company</a>
+                                    <a href="#">Grupo Logista</a>
+                                    <a href="#">Harmony Gold Mining Co Ltd</a>
+                                    <a href="#">Hyundai Glovis Co Ltd</a>
+                                </div>
+                                <!-- <ul class="list-unstyled" id="featured-companies-list">
+                                    <li><a href="#">Daiwa House Industry Co., Ltd.</a></li>
+                                    <li><a href="#">Deustche Telekom AG</a></li>
+                                    <li><a href="#">Formosa Chemicals & Fibre Corporation</a></li>
+                                    <li><a href="#">Fujitsu Limited</a></li>
+                                    <li><a href="#">General Motors Company</a></li>
+                                    <li><a href="#">Grupo Logista</a></li>
+                                    <li><a href="#">Harmony Gold Mining Co Ltd</a></li>
+                                    <li><a href="#">Hyundai Glovis Co Ltd</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="sort-by-name">
+                            <p><strong>By Name</strong></p>
+                            <p>
+                                <a href="#">#</a> <a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a href="#">F</a> <a href="#">G</a> 
+                                <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> 
+                                <a href="#">O</a> <a href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a href="#">U</a> 
+                                <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a href="#">Z</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Regions -->
+                <div class="dropdown-menu megamenu collapse w-100 border-0 rounded-0" data-bs-parent="#collapseParent" role="menu" id="regionCollapse">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="dropdown-header d-lg-flex d-xl-none p-0">
+                            <button type="button" class="btn-close" data-bs-target="#regionCollapse" aria-expanded="false" aria-controls="regionCollapse" data-bs-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="regions-large-device-layout">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-xxl-between">
+                            <!-- Column 1: Europe -->
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">EUROPE</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">Western</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Central</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Eastern</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <a href="#">UK</a>
+                                    <a href="#">France</a>
+                                    <a href="#">Germany</a>
+                                    <a href="#">Italy</a>
+                                    <a href="#">Spain</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Slovakia</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Estonia</a>
+                                    <a href="#">Lithuania</a>
+                                </div>
+                            </div>
+                            <!-- Column 2: Middle East -->
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">MIDDLE EAST</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">AFRICA</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">UAE</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">MENA</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Northern</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Central</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Southern</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <a href="#">Abu Dhabi</a>
+                                    <a href="#">Bahrain</a>
+                                    <a href="#">Dubai</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Egypt</a>
+                                    <a href="#">Israel</a>
+                                    <a href="#">Lebanon</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Algeria</a>
+                                    <a href="#">Jordan</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Nigeria</a>
+                                    <a href="#">Kenya</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">South Africa</a>
+                                </div>
+                            </div>
+                            <!-- Column 3: Asia -->
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">ASIA</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">Greater China</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">East Asia</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Southeast Asia</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">South Asia</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Australasia</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <a href="#">China</a>
+                                    <a href="#">Hong Kong</a>
+                                    <a href="#">Taiwan</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Japan</a>
+                                    <a href="#">Korea</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Indonesia</a>
+                                    <a href="#">Malaysia</a>
+                                    <a href="#">Philippines</a>
+                                    <a href="#">Singapore</a>
+                                    <a href="#">Thailand</a>
+                                    <a href="#">Vietnam</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">India</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Australia</a>
+                                    <a href="#">New Zealand</a>
+                                </div>
+                            </div>
+                            <!-- Column 4: Americas -->
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">AMERICAS</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">North</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">Central</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p class="megamenu-title">South</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-section regions">
+                                <div class="d-flex flex-column">
+                                    <a href="#">Canada</a>
+                                    <a href="#">United States</a>
+                                    <a href="#">Carribean</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Mexico</a>
+                                    <a href="#">Belize</a>
+                                    <a href="#">Panama</a>
+                                    <p>&nbsp;</p>
+                                    <a href="#">Argentina</a>
+                                    <a href="#">Brazil</a>
+                                    <a href="#">Columbia</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smaller Screens -->
+                    <div class="regions-small-device-layout">
+                        <div class="dropdown-menu-section regions">
+                            <div class="d-flex flex-row">
+                                <p class="megamenu-title">EUROPE</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="header">Western</div>
+                                <div class="country-links">
+                                    <a href="#">UK</a>
+                                    <a href="#">France</a>
+                                    <a href="#">Germany</a>
+                                    <a href="#">Italy</a>
+                                    <a href="#">Spain</a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="header">Central</div>
+                                <div class="country-links">
+                                    <a href="#">Slovakia</a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="header">Eastern</div>
+                                <div class="country-links">
+                                    <a href="#">Estonia</a>
+                                    <a href="#">Lithuania</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-menu-section regions">
+                            <div class="d-flex flex-row">
+                                <p class="megamenu-title">MIDDLE EAST</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="header">UAE</div>
+                                <div class="country-links">
+                                    <a href="#">Abu Dhabi</a>
+                                    <a href="#">Bahrain</a>
+                                    <a href="#">Dubai</a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="header">MENA</div>
+                                <div class="country-links">
+                                    <a href="#">Egypt</a>
+                                    <a href="#">Israel</a>
+                                    <a href="#">Lebanon</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sectors -->
+                <div class="dropdown-menu megamenu collapse w-100 border-0 rounded-0" data-bs-parent="#collapseParent" role="menu" id="sectorCollapse">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="dropdown-header d-lg-flex d-xl-none p-0">
+                            <button type="button" class="btn-close" data-bs-target="#sectorCollapse" aria-expanded="false" aria-controls="sectorCollapse" data-bs-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-xxl-between">
+                            <!-- Column 1: Business -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#">BUSINESS</a></p>
+                                </div>
+                            </div>
+                            <!-- Column 2: Communications -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#">COMMUNICATIONS</a></p>
+                                </div>
+                            </div>
+                            <!-- Column 3: Financial -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#"></a>FINANCIAL</p>
+                                </div>
+                            </div>
+                            <!-- Column 4: Healthcare -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#"></a>HEALTHCARE</p>
+                                </div>
+                            </div>
+                            <!-- Column 5: Industrial -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#"></a>INDUSTRIAL</p>
+                                </div>
+                            </div>
+                            <!-- Column 6: Lifestyle -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#"></a>LIFESTYLE</p>
+                                </div>
+                            </div>
+                            <!-- Column 7: Sustainability -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#">SUSTAINABILITY</a></p>
+                                </div>
+                            </div>
+                            <!-- Column 8: Technology -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#">TECHNOLOGY</a></p>
+                                </div>
+                            </div>
+                            <!-- Column 9: Cryptocurrency -->
+                            <div class="dropdown-menu-section sector">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title"><a href="#">CRYPTOCURRENCY</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Industry -->
+                <div class="dropdown-menu dropdown-menu-industry megamenu collapse w-100 border-0 rounded-0" data-bs-parent="#collapseParent" role="menu" id="industryCollapse">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="dropdown-header d-lg-flex d-xl-none p-0">
+                            <button type="button" class="btn-close" data-bs-target="#industryCollapse" aria-expanded="false" aria-controls="industryCollapse" data-bs-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-xxl-between">
+                        <!-- Column 1: Business -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">BUSINESS</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">ASEAN</a></li>
+                                    <li><a href="#">Daily News</a></li>
+                                    <li><a href="#">Government</a></li>
+                                    <li><a href="#">Human Resources</a></li>
+                                    <li><a href="#">Local Biz</a></li>
+                                    <li><a href="#">Startups</a></li>
+                                    <li><a href="#">Trade Shows</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 2: Communications -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">COMMUNICATIONS</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Advertising</a></li>
+                                    <li><a href="#">Broadcast & Satellite</a></li>
+                                    <li><a href="#">Media & Marketing</a></li>
+                                    <li><a href="#">Telecoms & 5G</a></li>
+                                    <li><a href="#">Mobility & Apps</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 3: Financial -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">FINANCIAL</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Banking & Insurance</a></li>
+                                    <li><a href="#">Cards & Payments</a></li>
+                                    <li><a href="#">Daily Finance</a></li>
+                                    <li><a href="#">Exchanges & Software</a></li>
+                                    <li><a href="#">FinTech</a></li>
+                                    <li><a href="#">Funds & Equities</a></li>
+                                    <li><a href="#">Legal & Compliance</a></li>
+                                    <li><a href="#">VC & PE</a></li>
+                                    <li><a href="#">Real Estate, REITs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 4: Healthcare -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">HEALTHCARE</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Alternative</a></li>
+                                    <li><a href="#">BioTech</a></li>
+                                    <li><a href="#">Clinical Trials</a></li>
+                                    <li><a href="#">Cosmetics & Personal</a></li>
+                                    <li><a href="#">Healthcare & Pharm</a></li>
+                                    <li><a href="#">MedTech</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 5: Industrial -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">INDUSTRIAL</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Automotive</a></li>
+                                    <li><a href="#">Chemicals</a></li>
+                                    <li><a href="#">Engineering & Const.</a></li>
+                                    <li><a href="#">Food & Beverage</a></li>
+                                    <li><a href="#">Manufacturing</a></li>
+                                    <li><a href="#">Metals & Mining</a></li>
+                                    <li><a href="#">Travel & Hospitality</a></li>
+                                    <li><a href="#">Oil & Gas</a></li>
+                                    <li><a href="#">Shipping & Transport</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 6: Lifestyle -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">LIFESTYLE</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Art & Design</a></li>
+                                    <li><a href="#">Beauty & Cosmetics</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Gaming & Web3</a></li>
+                                    <li><a href="#">Fashion & Apparel</a></li>
+                                    <li><a href="#">Motorsports</a></li>
+                                    <li><a href="#">Regional & Lifestyle</a></li>
+                                    <li><a href="#">Sports & Recreation</a></li>
+                                    <li><a href="#">Travel & Hospitality</a></li>
+                                    <li><a href="#">Retail & eCommerce</a></li>
+                                    <li><a href="#">Watches & Jewelry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 7: Sustainability -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">LIFESTYLE</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">AgriTech</a></li>
+                                    <li><a href="#">Energy</a></li>
+                                    <li><a href="#">Environment & ESG</a></li>
+                                    <li><a href="#">EVs, Transportation</a></li>
+                                    <li><a href="#">Smart Cities</a></li>
+                                    <li><a href="#">Water</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 8: Technology -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">TECHNOLOGY</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Artificial Intel [AI]</a></li>
+                                    <li><a href="#">Automation [IoT]</a></li>
+                                    <li><a href="#">Cloud & Enterprise</a></li>
+                                    <li><a href="#">CyberSecurity</a></li>
+                                    <li><a href="#">Digitalization</a></li>
+                                    <li><a href="#">Electronics</a></li>
+                                    <li><a href="#">Materials, Nanotech</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Column 9: CryptoCurrency -->
+                        <div class="dropdown-menu-section">                  
+                            <div class="d-flex flex-column">
+                                <p class="megamenu-title">CRYPTOCURRENCIES</p>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Blockchain</a></li>
+                                    <li><a href="#">Crypto & Exchange</a></li>
+                                    <li><a href="#">ICO & Tokens</a></li>
+                                    <li><a href="#">Metaverse & Games</a></li>
+                                    <li><a href="#">Mining & Staking</a></li>
+                                    <li><a href="#">NFT & Assets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Languages -->
+                <div class="dropdown-menu megamenu collapse w-100 border-0 rounded-0" data-bs-parent="#collapseParent" role="menu" id="languageCollapse">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="dropdown-header d-lg-flex d-xl-none p-0">
+                            <button type="button" class="btn-close" data-bs-target="#languageCollapse" aria-expanded="false" aria-controls="languageCollapse" data-bs-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-xxl-between">
+                            <!-- Column 1: English -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">ENGLISH</p>
+                                </div>
+                            </div>
+                            <!-- Column 2: Chinese S -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">CHINESE S</p>
+                                </div>
+                            </div>
+                            <!-- Column 3: Chinese T -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">CHINESE T</p>
+                                </div>
+                            </div>
+                            <!-- Column 4: Indonesian -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">INDONESIAN</p>
+                                </div>
+                            </div>
+                            <!-- Column 5: Japanese -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">JAPANESE</p>
+                                </div>
+                            </div>
+                            <!-- Column 6: Korean -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">KOREAN</p>
+                                </div>
+                            </div>
+                            <!-- Column 7: Vietnamese -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">VIETNAMESE</p>
+                                </div>
+                            </div>
+                            <!-- Column 8: Thai -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">THAI</p>
+                                </div>
+                            </div>
+                            <!-- Column 9: Bahasa -->
+                            <div class="dropdown-menu-section">                  
+                                <div class="d-flex flex-column">
+                                    <p class="megamenu-title">BAHASA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!-- </div> -->
+        <script src="../JS/header.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

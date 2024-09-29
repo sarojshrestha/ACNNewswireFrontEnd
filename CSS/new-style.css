@@ -36,6 +36,7 @@ body {
 }
 
 .top-nav {
+    padding: 0px 8px;
     background-color:#FAFAFA;
     display: flex;
     justify-content: space-between;
@@ -61,7 +62,7 @@ body {
     left: 0;
     opacity: 0;
     top: 100%;
-    min-width: 216px;
+    min-width: 176px;
     z-index: 1000;
 }
 
@@ -98,6 +99,7 @@ body {
     font-size: 12px;
     color: #242424;
     display: inline-block;
+    width: 176px;
 }
 
 .top-nav .nav-middle {
@@ -110,6 +112,12 @@ body {
     font-size: 12px;
     color: #242424;
     display: inline-block;
+}
+
+.top-nav .nav-right .nav-item a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #242424;
 }
 
 /* TOP NAV RESPONSIVENESS */
@@ -147,8 +155,9 @@ body {
 
 /* LOGO */
 .nav-logo {
-    gap: 75px;
+    gap: 72px;
     row-gap: 4px;
+    padding: 8px;
 }
 
 .nav-logo img {
@@ -216,6 +225,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 16px 0;
+    border-radius: 0%;
 }
 
 /* Company Tab */
@@ -263,7 +273,7 @@ body {
 }
 
 .fixed-top.sticked .dropdown-menu.full-width-dropdown.show {
-    top: 43px;
+    top: 41px;
 }
 
 .full-width-dropdown .container-fluid {
@@ -333,7 +343,7 @@ body {
 
 .fixed-top.sticked .nav-item .nav-link[aria-expanded="true"] {
     border-bottom: 4px solid black;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 /* For Regions tab */
@@ -345,12 +355,11 @@ body {
 /* THIRD ROW */
 .third-row-nav {
     background-color: white;
-    margin-top: 8px; /* was 16px; */
-    padding-left: 221px;
-    padding-right: 221px;
+    margin-top: 4px; /* was 16px; */
+    padding-left: 224px;
+    padding-right: 224px;
     width: 100%;
 }  
-
 
 /* SEPARATOR */
 .separator {
@@ -360,12 +369,12 @@ body {
     background-color: white;
     position: absolute;
     border: 1px #D7D7D7 solid;
-    top: 152px; /* Previously 168px; */
+    top: 160x; /* Previously 168px; */
     left: 0;
 }
 
 .sticked .separator {
-    top: 110px;
+    top: 120px;
 }
 
 /* PRESS RELEASE BODY */
@@ -974,7 +983,6 @@ p.title-pr {
 }
 
 .carousel-img img {
-    max-width: 960px;
     object-fit: cover;
     overflow: hidden;
 }
@@ -1089,4 +1097,3 @@ main {
 .news-items .news-item {
     min-width: 220px;
 }
-
