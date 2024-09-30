@@ -506,49 +506,48 @@ ol.list-number-parenthesis li::before {
         }
     }
 }
+
 @media (max-width: 1200px) {
     .regions-large-device-layout {
-        display: none; /* Hide large layout on small screens */
+        display: none;
     }
 
     .regions-small-device-layout {
-        display: block;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         margin-left: 24px;
-        font-size: 14px;
+    }
 
-        .dropdown-menu-section.regions {
-            display: flex;
-            flex-direction: column;
+    .dropdown-menu-section.regions {
+        display: block;
+    }
 
-            .megamenu-title {
-                width: 160px;
-            }
-        }
-        
-        .flex-row {
-            display: flex;
-            align-items: center;
-            margin-top: 16px; 
-            height: 16px;
-        }
+    .flex-row {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
 
-        .header {
-            min-width: 64px;
-            font-weight: 600;
-            flex: 0 0 auto;
-        }
-        
-        .country-links {
-            display: flex;
-            margin-left: 8px;
-            align-items: center;
-        }
-        
-        .country-links a {
-            margin-right: 16px;
-            width: 5rem;
-        }
+    .regions-header {
+        width: 200px;
+    }
+
+    .header {
+        min-width: 164px;
+        font-weight: 600;
+    }
+
+    .country-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .country-links a {
+        margin-bottom: 8px;
+        margin-right: 16px;
+        white-space: nowrap;
     }
 }
 
@@ -572,7 +571,6 @@ ol.list-number-parenthesis li::before {
 
 /* Responsiveness - Dropdown */
 @media (max-width: 768px) {
-    .dropdown-menu-section .d-flex .flex-column.regions, 
     .dropdown-menu-industry .dropdown-menu-section .d-flex {
         flex-direction: row !important;
     }
@@ -651,7 +649,7 @@ ol.list-number-parenthesis li::before {
     margin: 0px 4px;
 }
 
-/* carousel */
+/* CAROUSEL */
 .carousel-desc {
     padding: 152px 64px;
 }
@@ -1297,6 +1295,9 @@ main {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 /* Responsive Adjustments */
@@ -1312,6 +1313,10 @@ main {
     .footer-background .d-flex > div {
         flex-basis: 100%;
         max-width: 100%;
+    }
+
+    .footer-text {
+        font-size: 9px;
     }
 }
 
