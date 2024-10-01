@@ -34,13 +34,13 @@
 
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function(){
-                /////// Prevent closing from click inside dropdown
+                // Prevent closing from click inside dropdown
                 document.querySelectorAll('.dropdown-menu').forEach(function(element){
                     element.addEventListener('click', function (e) {
                     e.stopPropagation();
                     });
                 });
-                /////// remove show class on click on other nav-item
+                // Remove show class on click on other nav-item
                 const companyCollapsible = document.getElementById('companyCollapse')
                 companyCollapsible.addEventListener('show.bs.collapse', event => {
                     console.log(companyCollapsible)
