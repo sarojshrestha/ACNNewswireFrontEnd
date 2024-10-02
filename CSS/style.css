@@ -1506,9 +1506,9 @@ main {
 }
 
 .press-release-headline-logo img {
-    width: 100%;
+    width: auto;
     height: 60px;
-    display: block;
+    object-fit: cover;
 }
 
 .press-release-top-headline {
