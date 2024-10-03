@@ -122,7 +122,7 @@ async function loadPressRelease(id) {
 
         // COMPANY CARD
         document.getElementById('pr-company-card-logo').src = pressRelease.company_logo ?? '../Assets/placeholder.png';
-        document.getElementById('pr-company-link').innerHTML = pressRelease?.stock[0]?.url ?? ' PLACEHOLDER.COM';
+        document.getElementById('pr-company-link').innerHTML = pressRelease?.stock[0]?.url ?? 'PLACEHOLDER.COM';
         document.getElementById('pr-company-fb').innerHTML = null ?? ' PLACEHOLDER-FB.COM';
         document.getElementById('pr-company-twitter').innerHTML = null ?? ' PLACEHOLDER-TWITTER.COM';
         document.getElementById('pr-company-linkedin').innerHTML = null ?? ' PLACEHOLDER-LINKEDIN.COM';
