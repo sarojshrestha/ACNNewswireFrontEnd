@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const id = getPressReleaseId();
     loadPressRelease(id);
+    fetchMoreFromThisSource();
+    fetchRelatedPressReleases();
 });
 
 // TIMEZONES
@@ -94,10 +96,10 @@ async function loadPressRelease(id) {
         const pressRelease = data[id];
 
         // BREADCRUMBS
-        document.getElementById('breadcrumb-pr-title').textContent = pressRelease.headline;
-        document.getElementById('pr-source').textContent = pressRelease.source;
-        document.getElementById('pr-date').textContent = pressRelease.dateTime;
-        document.getElementById('pr-view').textContent = "PLACEHOLDER";
+        document.getElementById('breadcrumb-pr-title').innerHTML = pressRelease.headline;
+        document.getElementById('pr-source').innerHTML = pressRelease.source;
+        document.getElementById('pr-date').innerHTML = pressRelease.dateTime;
+        document.getElementById('pr-view').innerHTML = "PLACEHOLDER";
 
         // HEADLINE SECTION
         document.getElementById('pr-company-logo').src = pressRelease.company_logo ?? '../Assets/placeholder.png';
@@ -133,4 +135,181 @@ async function loadPressRelease(id) {
         console.error('Error:', error);
         alert('Failed to load press release.');
     }
+}
+
+// 5 MORE FROM THIS SOURCE
+function fetchMoreFromThisSource() {
+    const apiEndpoint = 'https://www.acnnewswire.com/acnnewswireapi/api/v1/News/AllNews';
+
+    fetch(apiEndpoint)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Response was NOT OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const moreFromThisSourcePRs = data.slice(0,5); // Get 5 press releases
+            console.log(moreFromThisSourcePRs);
+
+            const prContainer = document.getElementById('related-pr-container-mfts');
+            console.log(prContainer);
+            
+            moreFromThisSourcePRs.forEach(function(pr, i) {
+                let pressReleaseDiv = document.createElement('div');
+                pressReleaseDiv.classList.add('related-press-release-item');
+    
+                let pressReleaseImgContainer = document.createElement('div');
+                pressReleaseImgContainer.classList.add('related-press-release-item-thumbnail-mfts');
+                let pressReleaseImg = document.createElement('img');
+                pressReleaseImg.src = pr?.photo[0]?.bigImage ?? '../Assets/placeholder.png'
+                pressReleaseImg.alt = pr.headline;
+    
+                let pressReleaseContent = document.createElement('div');
+                pressReleaseContent.classList.add('related-press-release-item-content');
+
+                let pressReleaseDateView = document.createElement('p');
+                pressReleaseDateView.classList.add('related-press-release-item-date-views');
+    
+                let pressReleaseDate = document.createElement('span');
+                pressReleaseDate.classList.add('date-pr');
+                pressReleaseDate.innerHTML = `${pr.dateTime} &nbsp;•&nbsp;`;
+
+                let pressReleaseViews = document.createElement('span');
+                pressReleaseViews.classList.add('views-pr');
+                pressReleaseViews.innerHTML = `${pr.views ?? 1234} Views`;
+
+                let pressReleaseTitle = document.createElement('p');
+                pressReleaseTitle.classList.add('title-pr');
+                let pressReleaseTitleLink = document.createElement('a');
+                pressReleaseTitleLink.classList.add('text-decoration-none');
+                pressReleaseTitleLink.innerHTML = pr.headline;
+                pressReleaseTitleLink.href = `../HTML/press-release-page-api.html?id=${i}`;
+    
+                pressReleaseImgContainer.appendChild(pressReleaseImg);
+                pressReleaseDateView.appendChild(pressReleaseDate);
+                pressReleaseDateView.appendChild(pressReleaseViews);
+                pressReleaseTitle.appendChild(pressReleaseTitleLink);
+                pressReleaseContent.appendChild(pressReleaseDateView);
+                pressReleaseContent.appendChild(pressReleaseTitle);
+
+                pressReleaseDiv.appendChild(pressReleaseImgContainer);
+                pressReleaseDiv.appendChild(pressReleaseContent);
+
+                prContainer.appendChild(pressReleaseDiv);
+                
+            });
+
+            let morePressRelease = document.createElement('div');
+            morePressRelease.classList.add('more-press-releases');
+
+            let morePressReleaseLink = document.createElement('a');
+            morePressReleaseLink.href = `../HTML/home-page-api.html`;
+            morePressReleaseLink.innerHTML = 'More press releases';
+            
+            let morePressReleaseImg = document.createElement('img');
+            morePressReleaseImg.classList.add('arrow-icon');
+            morePressReleaseImg.src = '../Assets/press-release-page/arrow-right.svg'
+            morePressReleaseImg.alt = 'arrow';
+
+            morePressReleaseLink.appendChild(morePressReleaseImg);
+            morePressRelease.appendChild(morePressReleaseLink);
+            prContainer.appendChild(morePressRelease);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// 5 RELATED PRESS RELEASES
+async function fetchRelatedPressReleases() {
+    const apiEndpoint = 'https://www.acnnewswire.com/acnnewswireapi/api/v1/News/AllNews';
+
+    // GET THE SECTOR OF THE VIEWED PRESS RELEASE
+    const prID = getPressReleaseId();
+    const response = await fetch(`https://www.acnnewswire.com/acnnewswireapi/api/v1/News/AllNews`);
+    if (!response.ok) {
+        throw new Error('Response was NOT OK');
+    }
+    const data = await response.json();
+    const pressRelease = data[prID];
+
+    fetch(apiEndpoint)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Response was NOT OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const relatedPressReleases = data.slice(0,5); // Get 5 press releases
+            console.log(relatedPressReleases);
+
+            const prContainer = document.getElementById('related-pr-container');
+            console.log(prContainer);
+            
+            relatedPressReleases.forEach(function(pr, i) {
+                let pressReleaseDiv = document.createElement('div');
+                pressReleaseDiv.classList.add('related-press-release-item');
+    
+                let pressReleaseImgContainer = document.createElement('div');
+                pressReleaseImgContainer.classList.add('related-press-release-item-thumbnail');
+                let pressReleaseImg = document.createElement('img');
+                pressReleaseImg.src = pr?.photo[0]?.bigImage ?? '../Assets/placeholder.png'
+                pressReleaseImg.alt = pr.headline;
+    
+                let pressReleaseContent = document.createElement('div');
+                pressReleaseContent.classList.add('related-press-release-item-content');
+
+                let pressReleaseDateView = document.createElement('p');
+                pressReleaseDateView.classList.add('related-press-release-item-date-views');
+    
+                let pressReleaseDate = document.createElement('span');
+                pressReleaseDate.classList.add('date-pr');
+                pressReleaseDate.innerHTML = `${pr.dateTime} &nbsp;•&nbsp;`;
+
+                let pressReleaseViews = document.createElement('span');
+                pressReleaseViews.classList.add('views-pr');
+                pressReleaseViews.innerHTML = `${pr.views ?? 1234} Views`;
+
+                let pressReleaseTitle = document.createElement('p');
+                pressReleaseTitle.classList.add('title-pr');
+                let pressReleaseTitleLink = document.createElement('a');
+                pressReleaseTitleLink.classList.add('text-decoration-none');
+                pressReleaseTitleLink.innerHTML = pr.headline;
+                pressReleaseTitleLink.href = `../HTML/press-release-page-api.html?id=${i}`;
+    
+                pressReleaseImgContainer.appendChild(pressReleaseImg);
+                pressReleaseDateView.appendChild(pressReleaseDate);
+                pressReleaseDateView.appendChild(pressReleaseViews);
+                pressReleaseTitle.appendChild(pressReleaseTitleLink);
+                pressReleaseContent.appendChild(pressReleaseDateView);
+                pressReleaseContent.appendChild(pressReleaseTitle);
+
+                pressReleaseDiv.appendChild(pressReleaseImgContainer);
+                pressReleaseDiv.appendChild(pressReleaseContent);
+
+                prContainer.appendChild(pressReleaseDiv);
+            });
+
+            let morePressRelease = document.createElement('div');
+            morePressRelease.classList.add('more-press-releases');
+
+            let morePressReleaseLink = document.createElement('a');
+            morePressReleaseLink.href = `../HTML/home-page-api.html`;
+            let sectors = pressRelease.sector;
+            morePressReleaseLink.innerHTML = `View all ${sectors[0] ?? 'SAMPLE SECTOR'}`;
+            
+            let morePressReleaseImg = document.createElement('img');
+            morePressReleaseImg.classList.add('arrow-icon');
+            morePressReleaseImg.src = '../Assets/press-release-page/arrow-right.svg'
+            morePressReleaseImg.alt = 'arrow';
+
+            morePressReleaseLink.appendChild(morePressReleaseImg);
+            morePressRelease.appendChild(morePressReleaseLink);
+            prContainer.appendChild(morePressRelease);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }

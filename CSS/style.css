@@ -1295,7 +1295,7 @@ main {
     }
 
     .footer-text {
-        font-size: 9px;
+        font-size: 11px;
     }
 }
 
@@ -1451,12 +1451,36 @@ main {
     .container .inner .site-breadcrumbs {
         padding: 8px 24px;
         max-width: 576px;
+
+        .breadcrumb .breadcrumb-item,
+        .breadcrumb .breadcrumb-item a {
+            font-size: 14px;
+        }
     }
 
     .container.press-release-top,
     .container.press-release {
         max-width: 556px;
         padding: 0px 10px;
+        
+        .press-release-top-headline {
+            font-size: 14px;
+        }
+
+        .press-release-headline {
+            font-size: 24px;
+            line-height: 48px;
+        }
+
+        .press-release-sub-headline {
+            font-size: 18px;
+            line-height: 36px;
+        }
+
+        .press-release-body {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 
     .container.related-press-releases, .container.related-events {
@@ -1482,14 +1506,25 @@ main {
     .company-info-card {
         width: 100%;
     }
+
+    /* HOME PAGE */
+    .box-section-header h2 {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .box-section-header button {
+        font-size: 12px;
+    }
+
+    .carousel-inner-desc a .btn {
+        font-size: 12px;
+    }
 }
-
-
 
 
 /* PRESS RELEASE BODY */
 .press-release-headline-container {
-    /* margin-top: 24px; */
     width: 100%;
     padding: 8px;
 }
@@ -1572,10 +1607,6 @@ main {
 }
 
 /* COMPANY INFO CARD */
-/* .company-info-card {
-    width: 35%;
-} */
-
 .company-info-card .company-info-box {
     border-radius: 4px;
     border: 1px solid var(--color-neutral-600, #242424);
