@@ -150,10 +150,8 @@ function fetchMoreFromThisSource() {
         })
         .then(data => {
             const moreFromThisSourcePRs = data.slice(0,5); // Get 5 press releases
-            console.log(moreFromThisSourcePRs);
 
             const prContainer = document.getElementById('related-pr-container-mfts');
-            console.log(prContainer);
             
             moreFromThisSourcePRs.forEach(function(pr, i) {
                 let pressReleaseDiv = document.createElement('div');
@@ -243,10 +241,8 @@ async function fetchRelatedPressReleases() {
         })
         .then(data => {
             const relatedPressReleases = data.slice(0,5); // Get 5 press releases
-            console.log(relatedPressReleases);
 
             const prContainer = document.getElementById('related-pr-container');
-            console.log(prContainer);
             
             relatedPressReleases.forEach(function(pr, i) {
                 let pressReleaseDiv = document.createElement('div');

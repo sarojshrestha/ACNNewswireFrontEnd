@@ -100,7 +100,6 @@ function fetchTopReleases() {
         })
         .then(data => {
             const topPressReleases = data.slice(0,3); // Get 3 press releases
-            console.log(topPressReleases);
 
             for (let i = 0; i < topPressReleases.length; i++) {
                 document.getElementById(`press-release-image-${i+1}`).src = topPressReleases[i]?.photo[0]?.bigImage ?? '../Assets/placeholder.png';
@@ -128,7 +127,6 @@ function fetchLatestReleases() {
         })
         .then(data => {
             const lastestPressReleases = data.slice(0,5); // Get 5 press releases
-            console.log(lastestPressReleases);
 
             for (let i = 0; i < lastestPressReleases.length; i++) {
                 document.getElementById(`latest-release-image-${i+1}`).src = lastestPressReleases[i]?.photo[0]?.bigImage ?? '../Assets/placeholder.png';
@@ -160,10 +158,8 @@ function fetchTenPressReleases(element) {
         })
         .then(data => {
             const lastestTenPressReleases = data.slice(0,10); // Get 10 press releases
-            console.log(lastestTenPressReleases);
 
             const prContainer = document.getElementById(element);
-            console.log(prContainer);
             
             lastestTenPressReleases.forEach(function(pr, i) {
                 let pressReleaseDiv = document.createElement('div');
